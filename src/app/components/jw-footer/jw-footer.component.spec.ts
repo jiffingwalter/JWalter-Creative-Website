@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { JwFooterComponent } from './jw-footer.component';
 
 describe('JwFooterComponent', () => {
-  let component: JwFooterComponent;
-  let fixture: ComponentFixture<JwFooterComponent>;
+    let component: JwFooterComponent;
+    let fixture: ComponentFixture<JwFooterComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [JwFooterComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(JwFooterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [JwFooterComponent],
+        }).compileComponents();
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+        fixture = TestBed.createComponent(JwFooterComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
