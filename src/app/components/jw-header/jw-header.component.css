@@ -1,0 +1,21 @@
+.header-root{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .75rem;
+        min-width: 5rem;
+        cursor: pointer;
+    }
+}
+.header-root{
+    li:hover{
+        background-color: lightgray;
+        transition: .5s;
+    }
+}
