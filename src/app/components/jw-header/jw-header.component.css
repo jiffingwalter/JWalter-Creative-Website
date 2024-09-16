@@ -1,4 +1,4 @@
-.header-root{
+.header-list{
     display: flex;
     list-style: none;
     padding: 0;
@@ -13,7 +13,7 @@
         cursor: pointer;
     }
 }
-.header-root{
+.header-list{
     li:hover{
         background-color: lightgray;
         transition: .5s;
