@@ -1,3 +1,10 @@
+.header-root{
+    color: white;
+    background-color: rgb(31,31,31);
+}
+.header-root h1{
+    margin: 0;
+}
 .header-list{
     display: flex;
     list-style: none;
@@ -11,11 +18,11 @@
         padding: .75rem;
         min-width: 5rem;
         cursor: pointer;
+        clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
-}
-.header-list{
     li:hover{
-        background-color: lightgray;
-        transition: .5s;
+        background-color: orange;
+        transition: .075s;
+        transition-timing-function: ease-in;
     }
 }
