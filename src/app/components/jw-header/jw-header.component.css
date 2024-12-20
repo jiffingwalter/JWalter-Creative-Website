@@ -22,7 +22,7 @@
     padding: 0;
     margin: 0;
 
-    li {
+    li a{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,12 +31,16 @@
         cursor: pointer;
         clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
-    li:nth-child(1){
+    li:nth-child(1) a{
         clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
-    li:hover{
+    li a:hover{
         background-color: grey;
         transition: .075s;
         transition-timing-function: ease-in;
     }
+}
+a{
+    color: white;
+    text-decoration: none;
 }
