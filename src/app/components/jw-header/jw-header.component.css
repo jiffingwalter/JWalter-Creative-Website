@@ -2,8 +2,19 @@
     color: white;
     background-color: rgb(31,31,31);
 }
-.header-root h1{
+.hero-img{
+    background-image: url(../../../assets/images/header/header-bg.jpg);
+    background-position: center -4rem;
+    background-size: 100%;
+    display: flex;
     margin: 0;
+    padding: .5rem;
+    height: 7rem;
+    align-items: flex-end;
+}
+.hero-img h1{
+    margin: 0;
+    text-shadow: 0 0 10px #96ff00;
 }
 .header-list{
     display: flex;
@@ -21,7 +32,7 @@
         clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
     li:hover{
-        background-color: orange;
+        background-color: grey;
         transition: .075s;
         transition-timing-function: ease-in;
     }
