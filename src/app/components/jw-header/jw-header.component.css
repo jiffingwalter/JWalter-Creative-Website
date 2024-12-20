@@ -31,6 +31,9 @@
         cursor: pointer;
         clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
+    li:nth-child(1){
+        clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    }
     li:hover{
         background-color: grey;
         transition: .075s;
