@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-etsy',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './etsy.component.css'
 })
 export class EtsyComponent {
-
+  constructor(private titleService: Title){
+    this.titleService.setTitle('Etsy');
+  }
 }
