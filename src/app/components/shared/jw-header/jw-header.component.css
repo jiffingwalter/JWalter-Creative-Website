@@ -3,7 +3,7 @@
     background-color: rgb(31,31,31);
 }
 .hero-img{
-    background-image: url(../../../assets/images/header/header-bg.jpg);
+    background-image: url(../../../../assets/images/header/header-bg.jpg);
     background-position: center -4rem;
     background-size: 100%;
     display: flex;
