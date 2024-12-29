@@ -36,7 +36,7 @@
         clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
     li a:hover{
-        background-color: #8bc34a;
+        background-color: #8bc34a !important;
         transition: .075s;
         transition-timing-function: ease-in;
     }
