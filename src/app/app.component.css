@@ -1,0 +1,9 @@
+.root-stage{
+    width: 70rem;
+    background-color: whitesmoke;
+}
+@media screen and (max-width: 70rem){
+    .root-stage{
+        width: 100%;
+    }
+}
