@@ -1,5 +1,9 @@
 .landing-root{
-    width: 45rem;
+    width: 50rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .landing-tabs{
     display: flex;
@@ -19,7 +23,7 @@ h1{
     transition: width .25s;
 }
 .tab:hover{
-    width: 14rem;
+    width: 16rem;
 }
 .tab-art{
     background-image: url(../../../../assets/images/landing/landing-tab-art.jpg);
