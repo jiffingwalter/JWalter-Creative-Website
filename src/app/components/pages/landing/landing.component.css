@@ -1,0 +1,38 @@
+.landing-root{
+    width: 45rem;
+}
+.landing-tabs{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+.tab{
+    background-color: white;
+    height: 35rem;
+    width: 3rem;
+    margin: .25rem;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    transition: width .25s;
+}
+.tab:hover{
+    width: 14rem;
+}
+.tab-art{
+    background-image: url(../../../../assets/images/landing/landing-tab-art.jpg);
+    background-position: center;
+    background-size: auto 100%;
+}
+.tab-games{
+    background-image: url(../../../../assets/images/landing/landing-tab-games.jpg);
+    background-position: center;
+    background-size: auto 100%;
+}
+.tab-code{
+    background-image: url(../../../../assets/images/landing/landing-tab-code.jpg);
+    background-position: center;
+    background-size: auto 100%;
+}

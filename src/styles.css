@@ -16,3 +16,8 @@ body{
         width: 100%;
     }
 }
+
+/* Utility styles */
+.hidden{
+    visibility: hidden;
+}

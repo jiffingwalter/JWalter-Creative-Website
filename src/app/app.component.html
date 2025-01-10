@@ -1,4 +1,5 @@
-<div class="root-stage">
+<app-landing *ngIf="showLanding"></app-landing>
+<div class="root-stage" *ngIf="!showLanding">
     <app-jw-header></app-jw-header>
     <app-jw-body></app-jw-body>
     <app-jw-footer></app-jw-footer>
