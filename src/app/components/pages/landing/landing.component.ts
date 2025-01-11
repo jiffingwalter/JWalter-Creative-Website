@@ -13,4 +13,8 @@ export class LandingComponent {
   setTitle(title: String){
     this.focusedTab = title;
   }
+
+  toggleLanding(){
+    
+  }
 }

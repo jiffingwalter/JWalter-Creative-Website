@@ -1,9 +1,9 @@
 <div class="landing-root">
     <h1>Choose your flavor</h1>
     <div class="landing-tabs">
-        <div (mouseenter)="setTitle('Art')" (mouseleave)="setTitle(' ')" class="tab tab-art"></div>
-        <div (mouseenter)="setTitle('Games')" (mouseleave)="setTitle(' ')" class="tab tab-games"></div>
-        <div (mouseenter)="setTitle('Code')" (mouseleave)="setTitle(' ')" class="tab tab-code"></div>
+        <div class="tab tab-art" (mouseenter)="setTitle('Art')" (mouseleave)="setTitle(' ')" (click)="toggleLanding()"></div>
+        <div class="tab tab-games" (mouseenter)="setTitle('Games')" (mouseleave)="setTitle(' ')" (click)="toggleLanding()"></div>
+        <div class="tab tab-code" (mouseenter)="setTitle('Code')" (mouseleave)="setTitle(' ')" (click)="toggleLanding()"></div>
     </div>
     <h1>{{focusedTab}}</h1>
 </div>

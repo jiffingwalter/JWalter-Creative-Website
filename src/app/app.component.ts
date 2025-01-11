@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //import { RouterOutlet } from '@angular/router';
 import { JwHeaderComponent } from './components/shared/jw-header/jw-header.component';
 import { JwBodyComponent } from './components/shared/jw-body/jw-body.component';
 import { JwFooterComponent } from './components/shared/jw-footer/jw-footer.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
+import { ContextHandlerService } from './services/context-handler.service';
 
 @Component({
     selector: 'app-root',
@@ -23,5 +24,8 @@ import { LandingComponent } from './components/pages/landing/landing.component';
 export class AppComponent {
     title = 'Angular-Sandbox';
     
-    showLanding:Boolean = true;
+    // Get context from context handler
+    constructor(private context:ContextHandlerService){}
+    showLanding:Boolean = this.context.currentContext.toString() == 'landing';
+    //console.log(this.context.currentContext.toString() == 'landing');
 }
