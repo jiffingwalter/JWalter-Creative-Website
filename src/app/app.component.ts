@@ -23,9 +23,13 @@ import { ContextHandlerService } from './services/context-handler.service';
 })
 export class AppComponent {
     title = 'Angular-Sandbox';
+    showLanding:Boolean = true;
     
     // Get context from context handler
-    constructor(private context:ContextHandlerService){}
-    showLanding:Boolean = this.context.currentContext.toString() == 'landing';
-    //console.log(this.context.currentContext.toString() == 'landing');
+    constructor(
+        private context:ContextHandlerService
+    ){
+        this.showLanding = this.context.currentContext() == 'landing';
+        console.log(this.context.currentContext());
+    }
 }

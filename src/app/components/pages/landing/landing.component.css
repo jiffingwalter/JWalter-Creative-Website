@@ -19,6 +19,7 @@ h1{
     height: 35rem;
     width: 3rem;
     margin: .25rem;
+    cursor: pointer;
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     transition: width .25s;
 }

@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoggingService {
-
-  constructor() { }
+  log(message:any){
+    console.log(message);
+  }
+  error(message:any){
+    console.error(message);
+  }
+  warn(message:any){
+    console.warn(message);
+  }
 }
