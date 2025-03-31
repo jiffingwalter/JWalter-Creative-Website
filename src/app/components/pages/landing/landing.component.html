@@ -1,9 +1,27 @@
 <div class="landing-root">
     <h1>Choose your flavor</h1>
     <div class="landing-tabs">
-        <div class="tab tab-art" (mouseenter)="setTitle('Art')" (mouseleave)="setTitle(' ')" (click)="setContext('art')"></div>
-        <div class="tab tab-games" (mouseenter)="setTitle('Games')" (mouseleave)="setTitle(' ')" (click)="setContext('games')"></div>
-        <div class="tab tab-code" (mouseenter)="setTitle('Code')" (mouseleave)="setTitle(' ')" (click)="setContext('code')"></div>
+        <div class="tab tab-art" role="button" tabindex="0"
+            (focus)="setTitle('Art','focus')"
+            (blur)="unsetTitle()"
+            (mouseenter)="setTitle('Art','mouse')"
+            (mouseleave)="unsetTitle()"
+            (click)="setContext('Art')">
+        </div>
+        <div class="tab tab-games" role="button" tabindex="0"
+            (focus)="setTitle('Games','focus')"
+            (blur)="unsetTitle()"
+            (mouseenter)="setTitle('Code','mouse')"
+            (mouseleave)="unsetTitle()"
+            (click)="setContext('Games')">
+        </div>
+        <div class="tab tab-code" role="button" tabindex="0"
+            (focus)="setTitle('Code','focus')"
+            (blur)="unsetTitle()"
+            (mouseenter)="setTitle('Code','mouse')"
+            (mouseleave)="unsetTitle()"
+            (click)="setContext('Code')">
+        </div>
     </div>
-    <h1>{{focusedTab}}</h1>
+    <h1>{{displayedTab}}</h1>
 </div>

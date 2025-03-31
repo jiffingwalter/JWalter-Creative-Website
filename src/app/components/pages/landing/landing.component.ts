@@ -10,17 +10,24 @@ import { ContextHandlerService } from './../../../services/context-handler.servi
 })
 export class LandingComponent {
   focusedTab:String = '';
+  mousedTab:String = '';
+  displayedTab:String = '';
 
   constructor(private contextHandler: ContextHandlerService){
 
   }
-
-  setTitle(title: String){
+  setTitle(title:String,origin:String){
+    this.mousedTab = title;
     this.focusedTab = title;
+    this.displayedTab = title;
   }
-
+  unsetTitle(){
+    this.focusedTab = '';
+    this.mousedTab = '';
+    this.displayedTab = '';
+  }
   setContext(context:string){
-    this.contextHandler.currentContext.set(context);
+    this.contextHandler.currentContext.set(context.toLowerCase());
     console.log(this.contextHandler.currentContext());
   }
 }
