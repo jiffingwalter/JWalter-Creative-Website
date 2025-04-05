@@ -6,21 +6,21 @@
             (blur)="unsetTitle()"
             (mouseenter)="setTitle('Art','mouse')"
             (mouseleave)="unsetTitle()"
-            (click)="setContext('Art')">
+            (click)="selectContext('Art')">
         </div>
         <div class="tab tab-games" role="button" tabindex="0"
             (focus)="setTitle('Games','focus')"
             (blur)="unsetTitle()"
-            (mouseenter)="setTitle('Code','mouse')"
+            (mouseenter)="setTitle('Games','mouse')"
             (mouseleave)="unsetTitle()"
-            (click)="setContext('Games')">
+            (click)="selectContext('Games')">
         </div>
         <div class="tab tab-code" role="button" tabindex="0"
             (focus)="setTitle('Code','focus')"
             (blur)="unsetTitle()"
             (mouseenter)="setTitle('Code','mouse')"
             (mouseleave)="unsetTitle()"
-            (click)="setContext('Code')">
+            (click)="selectContext('Code')">
         </div>
     </div>
     <h1>{{displayedTab}}</h1>

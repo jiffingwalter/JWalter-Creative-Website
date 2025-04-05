@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //import { RouterOutlet } from '@angular/router';
 import { JwHeaderComponent } from './components/shared/jw-header/jw-header.component';
@@ -23,13 +23,16 @@ import { ContextHandlerService } from './services/context-handler.service';
 })
 export class AppComponent {
     title = 'Angular-Sandbox';
-    showLanding:Boolean = true;
+    showLanding: Signal<boolean>;
+    context: Signal<string>;
     
     // Get context from context handler
     constructor(
-        private context:ContextHandlerService
+        private contextService:ContextHandlerService
     ){
-        this.showLanding = this.context.currentContext() == 'landing';
-        console.log(this.context.currentContext());
+        this.showLanding = computed(() => this.contextService.currentContext() == 'landing');
+        this.context = computed(()=> this.contextService.currentContext());
     }
+
+    
 }

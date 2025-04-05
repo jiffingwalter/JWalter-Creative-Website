@@ -17,6 +17,7 @@ export class LandingComponent {
 
   }
   setTitle(title:String,origin:String){
+    // make this intelligent
     this.mousedTab = title;
     this.focusedTab = title;
     this.displayedTab = title;
@@ -26,8 +27,7 @@ export class LandingComponent {
     this.mousedTab = '';
     this.displayedTab = '';
   }
-  setContext(context:string){
+  selectContext(context:string){
     this.contextHandler.currentContext.set(context.toLowerCase());
-    console.log(this.contextHandler.currentContext());
   }
 }
