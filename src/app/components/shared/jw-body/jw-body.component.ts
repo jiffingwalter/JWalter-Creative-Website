@@ -12,5 +12,5 @@ import { Commission } from '../../../ts/CommissionClass';
     styleUrl: './jw-body.component.css',
 })
 export class JwBodyComponent {
-    commission:Commission = new Commission('guy','a test commission',new Date('9/14/2024'),'open');
+    
 }
