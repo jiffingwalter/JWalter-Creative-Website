@@ -7,6 +7,7 @@
             (mouseenter)="setTitle('Art','mouse')"
             (mouseleave)="unsetTitle()"
             (click)="selectContext('Art')">
+            <h1>Art</h1>
         </div>
         <div class="tab tab-games" role="button" tabindex="0"
             (focus)="setTitle('Games','focus')"
@@ -14,6 +15,7 @@
             (mouseenter)="setTitle('Games','mouse')"
             (mouseleave)="unsetTitle()"
             (click)="selectContext('Games')">
+            <h1>Games</h1>
         </div>
         <div class="tab tab-code" role="button" tabindex="0"
             (focus)="setTitle('Code','focus')"
@@ -21,7 +23,8 @@
             (mouseenter)="setTitle('Code','mouse')"
             (mouseleave)="unsetTitle()"
             (click)="selectContext('Code')">
+            <h1>Code</h1>
         </div>
     </div>
-    <h1>{{displayedTab}}</h1>
+    <!-- <h1>{{displayedTab}}</h1> -->
 </div>
