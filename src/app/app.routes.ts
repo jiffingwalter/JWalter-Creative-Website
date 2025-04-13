@@ -7,12 +7,14 @@ import { ArtComponent } from './components/pages/art/art.component';
 import { GamesComponent } from './components/pages/games/games.component';
 import { CodeComponent } from './components/pages/code/code.component';
 
+/* TODO: set these all up for lazy loading */
 export const routes:Routes = [
     {path: '', component: LandingComponent, title: "Welcome", data: {showNav: false}},
 
     {path: 'home', component: HomeComponent, title: "Home", data: {showNav: true}},
     {path: 'art', component: ArtComponent, title: "Art", data: {showNav: true}, children:[
-        {path: 'gallery', component: UnderconstructionComponent}
+        {path: 'gallery', title: "Gallery", component: UnderconstructionComponent},
+        {path: 'avatar-creator', title: "Avatar Creator", component: UnderconstructionComponent}
     ]},
     {path: 'games', component: GamesComponent, title: "Games", data: {showNav: true}},
     {path: 'code', component: CodeComponent, title: "Code", data: {showNav: true}},
@@ -20,6 +22,7 @@ export const routes:Routes = [
     {path: '**', component: NotfoundComponent, pathMatch: 'full', title: "Page not found :(", data: {showNav: false}}
 ];
 
+// Get nav buttons out of the router elements 
 export interface NavItem{
     name: string|undefined,
     path: string|undefined
