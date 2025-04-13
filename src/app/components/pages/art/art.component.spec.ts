@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EtsyComponent } from './etsy.component';
+import { ArtComponent } from './art.component';
 
-describe('EtsyComponent', () => {
-  let component: EtsyComponent;
-  let fixture: ComponentFixture<EtsyComponent>;
+describe('ArtComponent', () => {
+  let component: ArtComponent;
+  let fixture: ComponentFixture<ArtComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EtsyComponent]
+      imports: [ArtComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(EtsyComponent);
+    fixture = TestBed.createComponent(ArtComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

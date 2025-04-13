@@ -6,10 +6,7 @@
     </div>
     <nav>
         <ul class="header-list">
-            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-            <li><a routerLink="/gallery" routerLinkActive="active">Gallery</a></li>
-            <li><a routerLink="/etsy" routerLinkActive="active">Etsy</a></li>
+            <li *ngFor="let item of navItem"><a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
         </ul>
     </nav>
 </div>
