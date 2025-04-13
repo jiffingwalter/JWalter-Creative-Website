@@ -1,12 +1,13 @@
 <div class="landing-root">
     <h1>Choose your flavor</h1>
+    <!--TODO: if on mobile, focus the tab on press before going to the site-->
     <div class="landing-tabs">
         <div class="tab tab-art" role="button" tabindex="0"
             (focus)="setTitle('Art','focus')"
             (blur)="unsetTitle()"
             (mouseenter)="setTitle('Art','mouse')"
             (mouseleave)="unsetTitle()"
-            (click)="selectContext('Art')">
+            routerLink="/projects">
             <h1>Art</h1>
         </div>
         <div class="tab tab-games" role="button" tabindex="0"
@@ -14,7 +15,7 @@
             (blur)="unsetTitle()"
             (mouseenter)="setTitle('Games','mouse')"
             (mouseleave)="unsetTitle()"
-            (click)="selectContext('Games')">
+            routerLink="/gallery">
             <h1>Games</h1>
         </div>
         <div class="tab tab-code" role="button" tabindex="0"
@@ -22,7 +23,7 @@
             (blur)="unsetTitle()"
             (mouseenter)="setTitle('Code','mouse')"
             (mouseleave)="unsetTitle()"
-            (click)="selectContext('Code')">
+            routerLink="/etsy">
             <h1>Code</h1>
         </div>
     </div>

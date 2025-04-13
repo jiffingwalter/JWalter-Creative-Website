@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { ContextHandlerService } from './../../../services/context-handler.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
@@ -13,9 +16,9 @@ export class LandingComponent {
   mousedTab:String = '';
   displayedTab:String = '';
 
-  constructor(private contextHandler: ContextHandlerService){
-
-  }
+  constructor(
+    private contextHandler: ContextHandlerService
+  ){}
   setTitle(title:String,origin:String){
     // make this intelligent
     this.mousedTab = title;
@@ -26,8 +29,5 @@ export class LandingComponent {
     this.focusedTab = '';
     this.mousedTab = '';
     this.displayedTab = '';
-  }
-  selectContext(context:string){
-    this.contextHandler.currentContext.set(context.toLowerCase());
   }
 }
