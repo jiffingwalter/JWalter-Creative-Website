@@ -10,7 +10,6 @@ import { navListExport, NavItem } from '../../../app.routes';
         CommonModule,
         RouterLink,
         RouterLinkActive,
-        navListExport
     ],
     templateUrl: './jw-header.component.html',
     styleUrl: './jw-header.component.css',
