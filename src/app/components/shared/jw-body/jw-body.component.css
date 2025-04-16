@@ -1,13 +1,12 @@
 .body-root{
     /* background-color: whitesmoke; */
-    padding: 1rem;
-    margin: 1rem;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 ::ng-deep .body-root > :not(router-outlet){
-    width: 95%;
-    padding: 0 2rem;
+    width: 100%;
     background-color: white;
 }

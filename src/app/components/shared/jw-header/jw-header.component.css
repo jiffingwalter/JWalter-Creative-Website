@@ -30,29 +30,40 @@
     margin: 0;
     overflow: hidden;
 
-    li a{
+    .nav-item{
+        width: 100%;
+    }
+
+    .nav-item a{
         display: flex;
         justify-content: center;
         align-items: center;
         padding: .75rem;
-        min-width: 5rem;
+        min-width: 10rem;
         cursor: pointer;
         clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
         background-color: #3d3d3d
     }
-    li:nth-child(1) a{
+    .nav-item:nth-child(1) a{
         clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
     }
-    li a:hover{
+    .nav-item a:hover{
         background-color: #8bc34a !important;
         transition: .075s;
         transition-timing-function: ease-in;
     }
-    li a.active{
+    .nav-item a.active{
         background-color: grey;
+    }
+}
+/* MOBILE SM */
+@media screen and (min-width: 768px){
+    .nav-item{
+        width: fit-content !important;
     }
 }
 a{
     color: white;
     text-decoration: none;
 }
+

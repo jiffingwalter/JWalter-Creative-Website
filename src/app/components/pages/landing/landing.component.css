@@ -51,7 +51,7 @@ h1{
     background-image: url(../../../../assets/images/landing/landing-tab-code.jpg);
 }
 
-/* MOBILE */
+/* DESKTOP */
 @media screen and (min-width: 768px){
     .landing-root{
         width: 100%;
