@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 
-/* TODO: set these all up for lazy loading */
 export const routes: Routes = [
     { path: '',
         loadComponent: () => import('./components/pages/landing/landing.component').then(m => m.LandingComponent),
@@ -44,18 +43,32 @@ export const routes: Routes = [
 export interface NavItem {
     name: string | undefined,
     path: string | undefined
+    children: Array<NavItem> | undefined
 };
-
 let navList: Array<NavItem> = [];
 for (let i in routes) {
     const element = routes[i];
+
     if (element.data && element.data['showNav'] === true) {
-        const nav: NavItem = {
+        let navChildren: Array<NavItem> = [];
+        
+        if (element.children){
+            for (let i:number = 0; i < element.children?.length; i++){
+                const child:NavItem ={
+                    name: element.children[i].title?.toString(),
+                    path: element.children[i].path?.toString(),
+                    children: undefined
+                }
+                navChildren.push(child);
+            }
+        }
+
+        const nav:NavItem = {
             name: element.title?.toString(),
-            path: element.path?.toString()
+            path: element.path?.toString(),
+            children: navChildren
         }
         navList.push(nav);
     }
 }
-
 export const navListExport: Array<NavItem> = navList;
