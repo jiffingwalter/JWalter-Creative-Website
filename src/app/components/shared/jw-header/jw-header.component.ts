@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { navListExport, NavItem } from '../../../app.routes';
 import { NavService } from '@services/nav.service';
+import { NavItem } from '@interfaces/nav-item.interface';
 
 @Component({
     selector: 'app-jw-header',
@@ -16,8 +16,10 @@ import { NavService } from '@services/nav.service';
     styleUrl: './jw-header.component.css',
 })
 export class JwHeaderComponent {
-    navItem:NavItem[] = [];
-    constructor(){
-        this.navItem = navListExport;
+    navItems:Array<NavItem> = [];
+    constructor(
+        private navService:NavService
+    ){
+        this.navItems = navService.navList;
     }
 }

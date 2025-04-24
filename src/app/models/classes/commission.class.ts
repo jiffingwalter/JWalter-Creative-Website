@@ -4,13 +4,13 @@
 export class Commission{
     name:string;
     description:string;
-    date_created:Date;
+    dateCreated:Date;
     status:string;
 
-    constructor(name:string,description:string,date_created:Date,status:string){
+    constructor(name:string,description:string,dateCreated:Date,status:string){
         this.name = name;
         this.description = description;
-        this.date_created = date_created;
+        this.dateCreated = dateCreated;
         this.status = status;
     }
 

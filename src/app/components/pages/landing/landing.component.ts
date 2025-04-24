@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContextHandlerService } from './../../../services/context-handler.service';
+import { ContextHandlerService } from '@services/context-handler.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
