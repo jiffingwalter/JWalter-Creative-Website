@@ -4,7 +4,7 @@ import { JwHeaderComponent } from './components/shared/jw-header/jw-header.compo
 import { JwBodyComponent } from './components/shared/jw-body/jw-body.component';
 import { JwFooterComponent } from './components/shared/jw-footer/jw-footer.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
-import { ContextHandlerService } from './services/context-handler.service';
+import { NavService } from '@services/nav.service';
 
 @Component({
     selector: 'app-root',
@@ -26,10 +26,10 @@ export class AppComponent {
     
     // Get context from context handler
     constructor(
-        private contextService: ContextHandlerService,
+        private navService:NavService
     ){
-        this.showLanding = computed(() => this.contextService.currentRoute() == '/');
-        this.route = computed(()=> this.contextService.currentRoute());
+        this.showLanding = computed(() => this.navService.currentRoute() == '/');
+        this.route = computed(()=> this.navService.currentRoute());
     }
 
     
