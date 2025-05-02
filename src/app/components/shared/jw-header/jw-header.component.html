@@ -6,12 +6,16 @@
     </div>
     <nav>
         <ul class="header-list">
-            <li class="nav-item" *ngFor="let item of navItems"><a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
+            @for(item of navItems; track item){
+            <li class="nav-item"><a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
+            }
         </ul>
         @if(navItemChildren().length > 0){
-            <ul class="header-list header-sublist">
-                <li class="nav-item" *ngFor="let item of navItemChildren()"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
-            </ul>
+        <ul class="header-list header-sublist">
+            @for(item of navItemChildren(); track item){
+            <li class="nav-item sub-item"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
+            }
+        </ul>
         }
     </nav>
 </div>

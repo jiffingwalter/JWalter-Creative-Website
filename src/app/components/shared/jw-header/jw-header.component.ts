@@ -1,5 +1,4 @@
-import { Component, Signal, signal, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Signal, computed } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavService } from '@services/nav.service';
 import { NavItem } from '@interfaces/nav-item.interface';
@@ -8,7 +7,6 @@ import { NavItem } from '@interfaces/nav-item.interface';
     selector: 'app-jw-header',
     standalone: true,
     imports: [
-        CommonModule,
         RouterLink,
         RouterLinkActive,
     ],

@@ -5,7 +5,6 @@
 .hero-banner{
     display: flex;
     margin: 0;
-    /* padding: .5rem; */
     height: 7rem;
     align-items: flex-end;
     overflow: hidden;
@@ -40,16 +39,16 @@
         align-items: center;
         padding: .75rem;
         cursor: pointer;
-        clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+        clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
         background-color: #3d3d3d;
         transition: .075s;
         transition-timing-function: ease-in;
     }
     .nav-item:first-child a{
-        clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
     }
     .nav-item:last-child a{
-        clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%);
     }
     .nav-item a:hover{
         background-color: #8bc34a !important;
@@ -59,12 +58,13 @@
     }
 }
 .header-sublist{
+    margin-top: 0.2rem;
     .nav-item a{
         padding-top: .25rem;
         padding-bottom: .25rem;
     }
 }
-/* MOBILE SM */
+/* TABLET+ */
 @media screen and (min-width: 768px){
     .nav-item{
         width: fit-content !important;
@@ -73,7 +73,7 @@
         min-width: 10rem;
     }
     .nav-item:last-child a{
-        clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%) !important;
+        clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%) !important;
     }
 }
 a{

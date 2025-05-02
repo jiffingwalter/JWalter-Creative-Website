@@ -1,40 +1,58 @@
 import { Routes } from '@angular/router';
 
+/** Routes for navigation
+ *  
+ * Route types:
+ *      'hidden': purely functional, and never displayed
+ *      'primary': displays on the main nav bar all the time
+ *      'secondary': displays on the main nav bar ONLY if the root of the url matches the currently selected parent route
+*/
 export const routes: Routes = [
     { path: '',
-        loadComponent: () => import('./components/pages/landing/landing.component').then(m => m.LandingComponent),
         title: "Welcome",
-        data: { showNav: false } },
+        loadComponent: () => import('./components/pages/landing/landing.component').then(m => m.LandingComponent),
+        data: { type: 'hidden' } },
 
     { path: 'home',
-        loadComponent: () => import('./components/pages/home/home.component').then(m => m.HomeComponent),
         title: "Home",
-        data: { showNav: true }
+        loadComponent: () => import('./components/pages/home/home.component').then(m => m.HomeComponent),
+        data: { type: 'primary' }
     },
     { path: 'art',
-        loadComponent: () => import('./components/pages/art/art.component').then(m => m.ArtComponent),
         title: "Art",
-        data: { showNav: true },
-        children: [
-            { path: 'gallery', title: "Gallery", loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent) },
-            { path: 'avatar-creator', title: "Avatar Creator", loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent) }
-        ]
+        loadComponent: () => import('./components/pages/art/art.component').then(m => m.ArtComponent),
+        data: { type: 'primary' }
+    },
+    { path: 'art/gallery', 
+        title: "Gallery", 
+        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        data: { type: 'secondary' }
+    },
+    { path: 'art/avatar-creator', 
+        title: "Avatar Creator", 
+        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        data: { type: 'secondary' }
+    },
+    { path: 'art/etsy', 
+        title: "Etsy Shop", 
+        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        data: { type: 'secondary' }
     },
     { path: 'games',
         loadComponent: () => import('./components/pages/games/games.component').then(m => m.GamesComponent),
         title: "Games",
-        data: { showNav: true }
+        data: { type: 'primary' }
     },
     { path: 'code',
-        loadComponent: () => import('./components/pages/code/code.component').then(m => m.CodeComponent),
         title: "Code",
-        data: { showNav: true }
+        loadComponent: () => import('./components/pages/code/code.component').then(m => m.CodeComponent),
+        data: { type: 'primary' }
     },
 
     { path: '**',
+        title: "Page not found :(",
         loadComponent: () => import('./components/pages/notfound/notfound.component').then(m => m.NotfoundComponent),
         pathMatch: 'full',
-        title: "Page not found :(",
-        data: { showNav: false }
+        data: { type: 'hidden' }
     }
 ];

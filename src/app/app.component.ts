@@ -1,5 +1,4 @@
 import { Component, computed, Signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { JwHeaderComponent } from './components/shared/jw-header/jw-header.component';
 import { JwBodyComponent } from './components/shared/jw-body/jw-body.component';
 import { JwFooterComponent } from './components/shared/jw-footer/jw-footer.component';
@@ -10,7 +9,6 @@ import { NavService } from '@services/nav.service';
     selector: 'app-root',
     standalone: true,
     imports: [
-        CommonModule,
         JwHeaderComponent,
         JwBodyComponent,
         JwFooterComponent,
