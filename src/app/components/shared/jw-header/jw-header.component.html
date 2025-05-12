@@ -4,14 +4,14 @@
         <div class="hero-bg"></div>
         <h1>Justin's Website :-)</h1>
     </div>
-    <nav>
+    <nav class="header-nav">
         <ul class="header-list">
             @for(item of navItems; track item){
-            <li class="nav-item"><a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
+            <li class="nav-item" (mouseover)="toggleSubheader(item.path)"><a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
             }
         </ul>
         @if(navItemChildren().length > 0){
-        <ul class="header-list header-sublist">
+        <ul class="header-list header-sublist sublist-anchored">
             @for(item of navItemChildren(); track item){
             <li class="nav-item sub-item"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
             }

@@ -21,10 +21,10 @@ export class NavService {
 
     /** Retrieve all primary nav items from the Router */
     for (let element of this.routes) {
-      if (element.data && element.data['type'] === 'primary') {
+      if (element.title && element.path && element.data && element.data['type'] === 'primary') {
         const newItem: NavItem = {
-          name: element.title?.toString(),
-          path: element.path?.toString(),
+          name: element.title.toString(),
+          path: element.path.toString(),
           children: []
         }
         this.navList.push(newItem);
@@ -36,10 +36,10 @@ export class NavService {
         let root = element.path?.split('/')[0];
 
         for(let item of this.navList){
-          if(root === item.path){
+          if(element.title && element.path && root === item.path){
             const newItem: NavItem = {
-              name: element.title?.toString(),
-              path: element.path?.toString(),
+              name: element.title.toString(),
+              path: element.path.toString(),
               children: []
             }
             item.children.push(newItem);

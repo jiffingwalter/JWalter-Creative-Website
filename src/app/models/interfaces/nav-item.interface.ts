@@ -1,5 +1,5 @@
 export interface NavItem {
-    name: string | undefined,
-    path: string | undefined,
+    name: string,
+    path: string,
     children: Array<NavItem>
 }
