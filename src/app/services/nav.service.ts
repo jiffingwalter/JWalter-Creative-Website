@@ -1,14 +1,16 @@
-import { Injectable, signal } from '@angular/core';
-import { Router, Route } from '@angular/router';
+import { Injectable, signal, effect } from '@angular/core';
+import { Router, Route, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators'
 import { NavItem } from '@interfaces/nav-item.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavService {
-  routes: Array<Route> = [];
-  navList: Array<NavItem> = [];
-  currentRoute = signal<string>('');
+  readonly routes: Array<Route> = [];
+  readonly navList: Array<NavItem> = [];
+  readonly currentRoute = signal<string>('');
+  readonly routeChanged = signal<boolean>(true);
 
   constructor(private router: Router) {
     this.routes = this.router.config;
@@ -47,5 +49,13 @@ export class NavService {
         }
       }
     }
+
+    /** Create listener for whenever the route changes in the application */
+    this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))
+    .subscribe(() => {
+      this.routeChanged.set(true);
+      queueMicrotask(()=> this.routeChanged.set(false));
+    })
   }
 }

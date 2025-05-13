@@ -61,7 +61,7 @@
     }
 }
 .header-sublist{
-    margin-top: 0.2rem;
+    padding-top: 0.2rem;
     .nav-item a{
         padding-top: .25rem;
         padding-bottom: .25rem;
@@ -69,6 +69,8 @@
 }
 .sublist-floating{
     position: absolute;
+    background: linear-gradient(180deg, #1f1f1f, transparent);
+    width: 100%;
 }
 .sublist-anchored{
     position: static;

@@ -1,4 +1,4 @@
-import { Component, Signal, computed } from '@angular/core';
+import { Component, Signal, computed, signal, effect } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavService } from '@services/nav.service';
 import { NavItem } from '@interfaces/nav-item.interface';
@@ -16,6 +16,8 @@ import { NavItem } from '@interfaces/nav-item.interface';
 export class JwHeaderComponent {
     navItems:Array<NavItem>;
     navItemChildren:Signal<NavItem[]>;
+    navItemChildrenHovered:Array<NavItem>;
+    subnavShowing:Boolean = false;
     route:Signal<string>;
 
     constructor(
@@ -23,28 +25,24 @@ export class JwHeaderComponent {
     ){
         this.route = computed(()=> this.navService.currentRoute());
         this.navItems = navService.navList;
+        this.navItemChildrenHovered = [];
 
         // Check if the current nav item has any children and anchor the subheader if so
         this.navItemChildren = computed(() => {
-            for(let item of this.navItems){
-                let navRoot = this.route().split('/')[1];
-                let routeMatches = (('/' + item.path) === this.route() || navRoot === item.path);
-                if(
-                    (routeMatches && 
-                    item.children !== undefined && 
-                    item.children.length > 0)
-                ){
-                    return item.children;
-                }
-            }
-            return [];
+            return this.findChildren(this.route());
         });
+
+        // Listen for route changes and clear the show variable for subnav
+        effect(()=>{
+            if (this.navService.routeChanged()) {
+                this.subnavShowing = false;
+            }
+        })
     }
 
     /** Search the nav array for the children of the given route path */
     findChildren(query: string){
         for(let item of this.navItems){
-            let querySplit = query.split('/');
             let navRoot = query.split('/')[1] || query.split('/')[0];
             let pathMatches = (('/' + item.path) === query || navRoot === item.path);
             if(
@@ -58,13 +56,14 @@ export class JwHeaderComponent {
         return [];
     }
 
-    /** On mouseover, display the floating subheader with children if there are any */
-    toggleSubheader(path: string){
-        // check if its not the current route
-        // check if there's any children
-        if(this.route() !== path){
-
+    /** On mouseover, display the floating subheader with children for the path if there are any */
+    showSubnav(path: string){
+        if(this.route().split('/')[1] !== path){
+            let children = this.findChildren(path);
+            if (children.length > 0){
+                this.navItemChildrenHovered = children;
+                this.subnavShowing = true;
+            }
         }
-        // get children and enable floating subheader
     }
 }
