@@ -34,8 +34,7 @@ export class JwHeaderComponent {
         // Listen for route changes and clear the show variable for subnav
         effect(()=>{
             if (this.navService.routeChanged()) {
-                this.subnavShowing = false;
-                this.navItemChildrenHovered = [];
+                this.hideSubnav();
             }
         })
     }
@@ -48,6 +47,10 @@ export class JwHeaderComponent {
                 this.subnavShowing = true;
             }
         }
+    }
+    hideSubnav(){
+        this.subnavShowing = false;
+        this.navItemChildrenHovered = [];
     }
 
     /** Search the nav array for the children of the given route path */

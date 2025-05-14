@@ -23,7 +23,7 @@
         }
 
         <ul class="header-list header-sublist sublist-floating" [class.sublist-hide]="shouldHideSubnav()"
-            (mouseenter)="subnavShowing = true" (mouseleave)="subnavShowing = false">
+            (mouseenter)="subnavShowing = true" (mouseleave)="hideSubnav()">
             @for(item of navItemChildrenHovered; track item){
             <li class="nav-item sub-item"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
             }
