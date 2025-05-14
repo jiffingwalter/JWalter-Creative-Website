@@ -7,22 +7,26 @@
     <nav class="header-nav">
         <ul class="header-list">
             @for(item of navItems; track item){
-            <li class="nav-item" (mouseenter)="showSubnav(item.path)" (mouseleave)="subnavShowing = false"><a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
+            <li class="nav-item" (mouseenter)="showSubnav(item.path)" (mouseleave)="subnavShowing = false">
+                <a routerLink="/{{item.path}}" routerLinkActive="active">{{item.name}}</a>
+            </li>
             }
         </ul>
         @if(navItemChildren().length > 0){
         <ul class="header-list header-sublist sublist-anchored">
             @for(item of navItemChildren(); track item){
-            <li class="nav-item sub-item"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
+            <li class="nav-item sub-item">
+                <a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a>
+            </li>
             }
         </ul>
         }
-        @if(subnavShowing && navItemChildrenHovered.length > 0){
-            <ul class="header-list header-sublist sublist-floating">
-                @for(item of navItemChildrenHovered; track item){
-                <li class="nav-item sub-item"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
-                }
-            </ul>
+
+        <ul class="header-list header-sublist sublist-floating" [class.sublist-hide]="shouldHideSubnav()"
+            (mouseenter)="subnavShowing = true" (mouseleave)="subnavShowing = false">
+            @for(item of navItemChildrenHovered; track item){
+            <li class="nav-item sub-item"><a routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a></li>
             }
+        </ul>
     </nav>
 </div>
