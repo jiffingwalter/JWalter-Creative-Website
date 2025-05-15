@@ -25,17 +25,17 @@ export const routes: Routes = [
     },
     { path: 'art/gallery', 
         title: "Gallery", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        loadComponent: () => import('./components/pages/art-gallery/art-gallery.component').then(m => m.ArtGalleryComponent),
         data: { type: 'secondary' }
     },
     { path: 'art/avatar-creator', 
         title: "Avatar Creator", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        loadComponent: () => import('./components/pages/art-avatarcreator/art-avatarcreator.component').then(m => m.ArtAvatarcreatorComponent),
         data: { type: 'secondary' }
     },
     { path: 'art/etsy', 
         title: "Etsy Shop", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        loadComponent: () => import('./components/pages/art-etsy/art-etsy.component').then(m => m.ArtEtsyComponent),
         data: { type: 'secondary' }
     },
     { path: 'games',
