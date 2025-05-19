@@ -1,0 +1,36 @@
+.section-gallery{
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.gitem-card{
+    --gitem-size: 13rem;
+    width: var(--gitem-size);
+    border: 1px solid black;
+    padding: .1rem;
+    margin: .15rem;
+    box-shadow: 0 0 0 #00000080;
+    transform: translate(0,0);
+    transition: box-shadow .05s ease-out, transform .05s ease-out;
+
+    .gitem-image-wrapper{
+        width: var(--gitem-size);
+        height: var(--gitem-size);
+        background-color: lightgrey;
+    }
+    .gitem-meta{
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            margin: .1rem;
+        }
+    }
+}
+
+.gitem-card:hover{
+    box-shadow: 1px 1px 10px #00000080;
+    transform: translate(-0.1rem, -0.1rem);
+}
