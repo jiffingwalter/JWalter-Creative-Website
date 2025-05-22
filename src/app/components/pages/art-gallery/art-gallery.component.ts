@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './art-gallery.component.css'
 })
 export class ArtGalleryComponent {
-
+  constructor(private http: HttpClient){
+    //this.http.get('http://localhost:8080/api/v1/get-gallery-items').subscribe(response => {
+    //  console.log(response);
+    //})
+    
+  }
 }
