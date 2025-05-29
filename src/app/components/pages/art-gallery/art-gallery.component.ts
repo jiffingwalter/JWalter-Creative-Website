@@ -10,9 +10,12 @@ import { Component } from '@angular/core';
 })
 export class ArtGalleryComponent {
   constructor(private http: HttpClient){
-    //this.http.get('http://localhost:8080/api/v1/get-gallery-items').subscribe(response => {
-    //  console.log(response);
-    //})
-    
+    this.testAPI();
+  }
+
+  async testAPI(){
+    this.http.get('http://localhost:8080/api/v1/get-gallery-items').subscribe(response => {
+      console.log(response);
+    })
   }
 }
