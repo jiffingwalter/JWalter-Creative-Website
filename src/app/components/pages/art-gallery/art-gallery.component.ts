@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { GalleryItem } from '@interfaces/gallery-item.interface';
+import { GalleryService } from '@services/gallery.service';
 
 @Component({
   selector: 'app-art-gallery',
@@ -9,13 +10,18 @@ import { Component } from '@angular/core';
   styleUrl: './art-gallery.component.css'
 })
 export class ArtGalleryComponent {
-  constructor(private http: HttpClient){
-    this.testAPI();
+  galleryItemList:Array<GalleryItem> = [];
+  displayedGalleryItems:Array<GalleryItem> = [];
+
+  constructor(private galleryService: GalleryService) {
   }
 
-  async testAPI(){
-    this.http.get('http://localhost:8080/api/v1/get-gallery-items').subscribe(response => {
-      console.log(response);
-    })
+  async ngOnInit(){
+    try{
+      this.galleryItemList = await this.galleryService.getGalleryItems();
+      this.displayedGalleryItems = this.galleryItemList;
+    } catch (error){
+      console.error(`Couldn't fetch gallery items: `,error);
+    }
   }
 }

@@ -1,6 +1,15 @@
 <div class="page-root">
     <div class="section-gallery">
-        <div class="gitem-card" role="button" tabindex="0">
+        @for(item of displayedGalleryItems; track item){
+            <div class="gitem-card" role="button" tabindex="0">
+            <div class="gitem-image-wrapper"></div>
+            <div class="gitem-meta">
+                <p class="gitem-title">{{item.title}}</p>
+                <p class="gitem-date">{{item.dateUploaded}}</p>
+            </div>
+        </div>
+        }
+        <!-- <div class="gitem-card" role="button" tabindex="0">
             <div class="gitem-image-wrapper"></div>
             <div class="gitem-meta">
                 <p class="gitem-title">Gallery item 1</p>
@@ -55,6 +64,6 @@
                 <p class="gitem-title">Gallery item 8</p>
                 <p class="gitem-date">01/01/2025</p>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
