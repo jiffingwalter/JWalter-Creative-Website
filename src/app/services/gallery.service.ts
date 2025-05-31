@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { GalleryItem } from '@interfaces/gallery-item.interface';
-import { Observable, firstValueFrom } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,6 @@ import { Observable, firstValueFrom } from 'rxjs';
 export class GalleryService {
 
   constructor(private http: HttpClient) {
-
   }
 
   async getGalleryItems(): Promise<GalleryItem[]> {

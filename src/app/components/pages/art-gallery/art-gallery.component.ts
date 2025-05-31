@@ -1,3 +1,4 @@
+import { DatePipe, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { GalleryItem } from '@interfaces/gallery-item.interface';
 import { GalleryService } from '@services/gallery.service';
@@ -5,7 +6,9 @@ import { GalleryService } from '@services/gallery.service';
 @Component({
   selector: 'app-art-gallery',
   standalone: true,
-  imports: [],
+  imports: [
+    DatePipe
+  ],
   templateUrl: './art-gallery.component.html',
   styleUrl: './art-gallery.component.css'
 })
