@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "Angular-Sandbox": {
+        "jwalter-creative-website": {
             "projectType": "application",
             "schematics": {},
             "root": "",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/angular-sandbox",
+                        "outputPath": "dist/jwalter-creative-website",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": ["zone.js"],
@@ -50,10 +50,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "Angular-Sandbox:build:production"
+                            "buildTarget": "jwalter-creative-website:build:production"
                         },
                         "development": {
-                            "buildTarget": "Angular-Sandbox:build:development"
+                            "buildTarget": "jwalter-creative-website:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -61,7 +61,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "buildTarget": "Angular-Sandbox:build"
+                        "buildTarget": "jwalter-creative-website:build"
                     }
                 },
                 "test": {
