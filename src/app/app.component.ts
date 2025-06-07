@@ -18,7 +18,7 @@ import { NavService } from '@services/nav.service';
     styleUrl: './app.component.css',
 })
 export class AppComponent {
-    title = 'Angular-Sandbox';
+    title = 'jwalter-creative-website';
     showLanding: Signal<boolean>;
     route: Signal<string>;
     
