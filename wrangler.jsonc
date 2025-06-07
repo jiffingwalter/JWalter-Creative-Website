@@ -5,14 +5,14 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "jwalter-creative-website",
-	"main": "./dist/server/server.mjs",
-	"compatibility_flags": [
-		"nodejs_compat"
-	],
+	"main": "./worker.js",
 	"compatibility_date": "2025-06-03",
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./dist/browser"
+	},
+	"site": {
+		"bucket": "./dist/browser"
 	},
 	"observability": {
 		"enabled": true
