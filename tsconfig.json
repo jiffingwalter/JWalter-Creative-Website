@@ -26,6 +26,7 @@
             "@services/*": ["app/services/*"],
             "@interfaces/*": ["app/models/interfaces/*"],
             "@classes/*": ["app/models/classes/*"],
+            "@assets/*": ["assets/*"],
         }
     },
     "angularCompilerOptions": {

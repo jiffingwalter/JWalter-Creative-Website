@@ -42,16 +42,16 @@
         align-items: center;
         padding: .75rem;
         cursor: pointer;
-        clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+        clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
         background-color: #3d3d3d;
         transition: .075s;
         transition-timing-function: ease-in;
     }
     .nav-item:first-child a{
-        clip-path: polygon(0% 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
     }
     .nav-item:last-child a{
-        clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 0% 100%);
     }
     .nav-item a:hover, .nav-item a:focus{
         background-color: #8bc34a !important;
@@ -63,8 +63,7 @@
 .header-sublist{
     padding-top: 0.2rem;
     .nav-item a{
-        padding-top: .25rem;
-        padding-bottom: .25rem;
+        padding: .25rem .1rem;
     }
 }
 .sublist-floating{
@@ -92,7 +91,7 @@
         min-width: 10rem;
     }
     .nav-item:last-child a{
-        clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%) !important;
+        clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%) !important;
     }
 }
 a{

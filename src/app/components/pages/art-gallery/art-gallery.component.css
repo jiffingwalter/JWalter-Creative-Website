@@ -15,10 +15,15 @@
     transform: translate(0,0);
     transition: box-shadow .05s ease-out, transform .05s ease-out;
 
-    .gitem-image-wrapper{
+    .gitem-thumb-wrapper{
         width: var(--gitem-size);
         height: var(--gitem-size);
         background-color: lightgrey;
+        overflow: hidden;
+
+        .gitem-thumbnail{
+            width:100%;
+        }
     }
     .gitem-meta{
         display: flex;
