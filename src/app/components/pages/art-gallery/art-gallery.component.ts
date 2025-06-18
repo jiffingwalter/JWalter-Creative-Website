@@ -1,4 +1,5 @@
-import { DatePipe, CommonModule } from '@angular/common';
+import { DatePipe } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Component } from '@angular/core';
 import { GalleryItem } from '@interfaces/gallery-item.interface';
 import { GalleryService } from '@services/gallery.service';
@@ -7,7 +8,8 @@ import { GalleryService } from '@services/gallery.service';
   selector: 'app-art-gallery',
   standalone: true,
   imports: [
-    DatePipe
+    DatePipe,
+    RouterLink
   ],
   templateUrl: './art-gallery.component.html',
   styleUrl: './art-gallery.component.css'

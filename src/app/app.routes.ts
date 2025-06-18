@@ -28,6 +28,11 @@ export const routes: Routes = [
         loadComponent: () => import('./components/pages/art-gallery/art-gallery.component').then(m => m.ArtGalleryComponent),
         data: { type: 'secondary' }
     },
+    { path: 'art/gallery/:id', 
+        title: "Gallery Item", 
+        loadComponent: () => import('./components/pages/art-gallery-detail/art-gallery-detail.component').then(m => m.ArtGalleryDetailComponent),
+        data: { type: 'hidden' }
+    },
     { path: 'art/avatar-creator', 
         title: "Avatar Creator", 
         loadComponent: () => import('./components/pages/art-avatarcreator/art-avatarcreator.component').then(m => m.ArtAvatarcreatorComponent),

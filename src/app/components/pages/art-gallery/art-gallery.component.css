@@ -6,8 +6,11 @@
 }
 
 .gitem-card{
-    width: var(--gitem-size);
     --gitem-size: 12.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    width: var(--gitem-size);
     border: 1px solid black;
     padding: .1rem;
     margin: .15rem;
