@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Component } from '@angular/core';
-import { GalleryItem } from '@interfaces/gallery-item.interface';
+import { GalleryItem } from '@classes/gallery-item.class';
 import { GalleryService } from '@services/gallery.service';
 
 @Component({
@@ -18,8 +18,7 @@ export class ArtGalleryComponent {
   galleryItemList:Array<GalleryItem> = [];
   displayedGalleryItems:Array<GalleryItem> = [];
 
-  constructor(private galleryService: GalleryService) {
-  }
+  constructor(private galleryService: GalleryService) {}
 
   async ngOnInit(){
     try{

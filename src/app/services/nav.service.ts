@@ -12,7 +12,9 @@ export class NavService {
   readonly currentRoute = signal<string>('');
   readonly routeChanged = signal<boolean>(true);
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+  ) {
     this.routes = this.router.config;
     
     /** Retrieve current route and assign it to a signal */
