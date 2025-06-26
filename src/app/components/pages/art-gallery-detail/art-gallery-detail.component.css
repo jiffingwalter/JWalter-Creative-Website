@@ -1,0 +1,38 @@
+.page-root{
+    padding: 0;
+}
+.section-item{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-media{
+    width: 100%;
+}
+.item-details{
+    width: 95%;
+    > h2{
+        margin: 0;
+    }
+}
+.media-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.media-container img{
+    width: 100%;
+    max-width: 80vh;
+    cursor: pointer;
+}
+.media-container.expanded img{
+    max-width: 100%;
+}

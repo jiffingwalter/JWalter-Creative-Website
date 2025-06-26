@@ -1,5 +1,16 @@
-@if (currentItem){
-    {{currentItem.title}}<br>
-    {{currentItem.description}}<br>
-    {{currentItem.dateCreated}}<br>
-}
+<div class="page-root">
+    <div class="section-item">
+        <div class="item-wrapper">
+            <div class="item-media">
+                <div #mediaContainer role="button" tabindex="0" class="media-container" [class.expanded]="mediaExpanded" (click)="toggleMediaExpanded()">
+                    <img src="../../../../assets/images/gallery/no-thumbnail.jpg">
+                </div>
+            </div>
+            <div class="item-details">
+                <h2>{{currentItem?.title}}</h2>
+                <p>{{currentItem?.description}}</p>
+                <p>{{currentItem?.dateCreated}}</p>
+            </div>
+        </div>
+    </div>
+</div>
