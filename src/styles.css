@@ -29,8 +29,47 @@ body{
 .hidden{
     visibility: hidden;
 }
+.flex{
+    display: flex;
+}
+.flex.col{
+    flex-direction: column;
+}
+.flex.row{
+    flex-direction: row;
+}
+.flex.center-hor{
+    align-items: center;
+}
+.flex.center-ver{
+    justify-content: center;
+}
+.flex.center{
+    align-items: center;
+    justify-content: center;
+}
 
 /* Shared rules */
 .page-root{
     padding: 0 1rem;
+}
+button{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: .75rem;
+    cursor: pointer;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    background-color: #a8a8a8;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    transition: .075s;
+    transition-timing-function: ease-in;
+}
+button:hover{
+    background-color: #8bc34a !important;
+}
+button.active{
+    background-color: #8bc34a !important;
 }

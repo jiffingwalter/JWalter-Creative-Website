@@ -1,0 +1,15 @@
+.img-wrapper{
+    max-width: 10rem;
+    img{
+        width: 100%;
+    }
+}
+.skill-detail{
+    background-color: #ececec;
+    overflow: hidden;
+    transition: height .25s;
+    height: 0rem;
+}
+.skill-detail.expanded{
+    height: 5rem;
+}
