@@ -9,7 +9,7 @@
             </p>
             <p>
                 I've been in the industry for almost 2 years, working with various programming languages and tech stacks 
-                with multiple fortune-500 companies, and always looking to broaden my horizons and skills.
+                with multiple fortune-500 companies, and I'm always looking to broaden my horizons and skills.
             </p>
             <p>
                 Outside of strictly front-end programming, I've got an interest in a little bit of everything!
@@ -20,7 +20,7 @@
             </p>
             <p>
                 I'm also very interested in different aspects of game development, and work on many of my own small game
-                projects, as well as modding, contained in the 'Games' section.
+                projects for fun, which can be found in the 'Games' section.
             </p>
         </div>
         <div class="col img-wrapper">
@@ -33,7 +33,7 @@
             <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill?.label">{{skill.label}}</button>
         }
             <div class="skill-detail" [class.expanded]="isSkillSelected">
-                <p>Experience: {{selectedSkill?.level}}</p>
+                <p><b>Experience:</b> {{selectedSkill?.level}}</p>
                 <p>{{selectedSkill?.description}}</p>
             </div>
     </div>

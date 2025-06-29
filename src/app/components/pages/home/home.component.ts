@@ -15,6 +15,11 @@ export class HomeComponent {
   isSkillSelected: boolean = false;
   skills: Array<SkillItem> = [
     {
+      label: 'HTML/CSS',
+      level: 'Intermediate',
+      description: 'html css experience'
+    },
+    {
       label: 'JavaScript',
       level: 'Intermediate',
       description: 'javascript experience'
@@ -23,11 +28,6 @@ export class HomeComponent {
       label: 'TypeScript',
       level: 'Intermediate',
       description: 'typescript experience'
-    },
-    {
-      label: 'HTML/CSS',
-      level: 'Intermediate',
-      description: 'html css experience'
     },
     {
       label: 'Angular 2+',
@@ -43,6 +43,16 @@ export class HomeComponent {
       label: 'ServiceNow',
       level: 'Intermediate',
       description: 'servicenow experience'
+    },
+    {
+      label: 'Java & SpringBoot',
+      level: 'Beginner',
+      description: 'java & springboot experience'
+    },
+    {
+      label: 'SQL',
+      level: 'Beginner',
+      description: 'sql experience (raw sql, postgres, snowflake)'
     },
   ];
 

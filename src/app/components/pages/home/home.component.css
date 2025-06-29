@@ -9,7 +9,11 @@
     overflow: hidden;
     transition: height .25s;
     height: 0rem;
+
+    p{
+        margin: .5rem; 
+    }
 }
 .skill-detail.expanded{
-    height: 5rem;
+    height: 8rem;
 }

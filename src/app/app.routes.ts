@@ -11,7 +11,8 @@ export const routes: Routes = [
     { path: '',
         title: "Welcome",
         loadComponent: () => import('./components/pages/landing/landing.component').then(m => m.LandingComponent),
-        data: { type: 'hidden' } },
+        data: { type: 'hidden' } 
+    },
 
     { path: 'home',
         title: "Home",
@@ -48,31 +49,31 @@ export const routes: Routes = [
         title: "Games",
         data: { type: 'primary' }
     },
-    { path: 'games/projects', 
-        title: "Game Projects", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
-        data: { type: 'secondary' }
-    },
-    { path: 'games/devlog', 
-        title: "Game Devlog", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
-        data: { type: 'secondary' }
-    },
+    // { path: 'games/projects', 
+        // title: "Game Projects", 
+        // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        // data: { type: 'secondary' }
+    // },
+    // { path: 'games/devlog', 
+        // title: "Game Devlog", 
+        // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        // data: { type: 'secondary' }
+    // },
     { path: 'code',
         title: "Code",
         loadComponent: () => import('./components/pages/code/code.component').then(m => m.CodeComponent),
         data: { type: 'primary' }
     },
-    { path: 'code/projects', 
-        title: "Code Projects", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
-        data: { type: 'secondary' }
-    },
-    { path: 'code/blog', 
-        title: "Developer Blog", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
-        data: { type: 'secondary' }
-    },
+    // { path: 'code/projects', 
+        // title: "Code Projects", 
+        // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        // data: { type: 'secondary' }
+    // },
+    // { path: 'code/blog', 
+        // title: "Developer Blog", 
+        // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        // data: { type: 'secondary' }
+    // },
 
     { path: '**',
         title: "Page not found :(",
