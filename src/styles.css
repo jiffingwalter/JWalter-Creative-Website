@@ -38,10 +38,10 @@ body{
 .flex.row{
     flex-direction: row;
 }
-.flex.center-hor{
+.flex.center-h{
     align-items: center;
 }
-.flex.center-ver{
+.flex.center-v{
     justify-content: center;
 }
 .flex.center{
@@ -67,9 +67,13 @@ button{
     transition: .075s;
     transition-timing-function: ease-in;
 }
-button:hover{
+button:hover:not([disabled]){
     background-color: #8bc34a !important;
 }
-button.active{
+button.active:not([disabled]){
     background-color: #8bc34a !important;
+}
+button[disabled]{
+    background-color: lightgrey;
+    cursor: default;
 }

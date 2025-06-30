@@ -32,10 +32,10 @@
         @for(skill of skills; track $index){
             <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill?.label">{{skill.label}}</button>
         }
-            <div class="skill-detail" [class.expanded]="isSkillSelected">
-                <p><b>Experience:</b> {{selectedSkill?.level}}</p>
-                <p>{{selectedSkill?.description}}</p>
-            </div>
+        <div class="skill-detail" [class.expanded]="isSkillSelected">
+            <p><b>Experience:</b> {{selectedSkill?.level}}</p>
+            <p>{{selectedSkill?.description}}</p>
+        </div>
     </div>
     <div class="section-">
 

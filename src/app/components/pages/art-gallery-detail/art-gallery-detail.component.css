@@ -16,6 +16,11 @@
 .item-media{
     width: 100%;
 }
+.item-buttons{
+    button{
+        width: 4rem;
+    }
+}
 .item-details{
     width: 95%;
     > h2{

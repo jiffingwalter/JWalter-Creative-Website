@@ -1,16 +1,34 @@
 <div class="page-root">
+    @if(currentItem){
     <div class="section-item">
         <div class="item-wrapper">
             <div class="item-media">
                 <div #mediaContainer role="button" tabindex="0" class="media-container" [class.expanded]="mediaExpanded" (click)="toggleMediaExpanded()">
-                    <img src="../../../../assets/images/gallery/no-thumbnail.jpg">
+                    @for(slide of currentItem.content; track $index){
+                        @if($index == currentSlide){
+                            <img src="../../../../assets/images/gallery/no-thumbnail.jpg">
+                        }
+                    }
                 </div>
+                @if(currentItem.content.length > 1){
+                <div class="item-buttons flex row center-v">
+                    <button (click)="slideLeft()" [disabled]="!isMoveValid(-1)"><</button>
+                    <button disabled>{{currentSlide + 1}} / {{currentItem.content.length}}</button>
+                    <button (click)="slideRight()" [disabled]="!isMoveValid(1)">></button>
+                </div>
+                }
             </div>
             <div class="item-details">
-                <h2>{{currentItem?.title}}</h2>
-                <p>{{currentItem?.description}}</p>
-                <p>{{currentItem?.dateCreated}}</p>
+                <h2>{{currentItem.title}}</h2>
+                <sub>{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
+                <p>{{currentItem.description}}</p>
+                @for(tag of currentItem.tags; track $index){
+                <sup>
+                    {{tag}}@if($index < currentItem.tags.length - 1){, }
+                </sup>
+                }
             </div>
         </div>
     </div>
+    }
 </div>

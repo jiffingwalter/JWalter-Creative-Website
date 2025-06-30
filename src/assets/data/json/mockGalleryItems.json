@@ -3,35 +3,131 @@
         "id": "1a4e6735-b8b8-430c-9dfc-0916ee50153f",
         "title": "Gallery item 1",
         "description": "sample description",
-        "dateUploaded": "2025-05-28T16:00:00",
+        "content":[
+            {
+                "id":"012345",
+                "title":"image 1",
+                "type":"image"
+            }
+        ],
+        "tags":[
+            "test1",
+            "cool thing",
+            "mock"
+        ],
+        "loadDate": "2025-05-28T16:00:00",
         "dateCreated": "2025-05-28T16:00:00"
     },
     {
         "id": "c4320b31-ab4e-40eb-9552-c0c0eb00e9c9",
         "title": "Gallery item 2",
         "description": "Sample description 2",
-        "dateUploaded": "2025-05-28T16:00:00",
+        "content":[
+            {
+                "id":"246801",
+                "title":"image 1",
+                "type":"image"
+            },
+            {
+                "id":"098765",
+                "title":"image 2",
+                "type":"image"
+            },
+            {
+                "id":"135790",
+                "title":"image 3",
+                "type":"image"
+            }
+        ],
+        "tags":[
+            "item 2",
+            "nice thing"
+        ],
+        "loadDate": "2025-05-28T16:00:00",
         "dateCreated": "2025-05-28T16:00:00"
     },
     {
         "id": "a69b70b7-7e21-4510-af1e-1e21e424e53f",
         "title": "Gallery item 3",
         "description": "Sample description 3",
-        "dateUploaded": "2025-05-28T16:00:00",
+        "content":[
+            {
+                "id":"012345",
+                "title":"image 1",
+                "type":"image"
+            },
+            {
+                "id":"246801",
+                "title":"image 1",
+                "type":"image"
+            },
+            {
+                "id":"098765",
+                "title":"image 2",
+                "type":"image"
+            },
+            {
+                "id":"135790",
+                "title":"image 3",
+                "type":"image"
+            }
+        ],
+        "tags":[
+        ],
+        "loadDate": "2025-05-28T16:00:00",
         "dateCreated": "2025-05-28T16:00:00"
     },
     {
         "id": "e53d3b1a-86aa-4243-8f08-49bc3460950a",
         "title": "Gallery item 4",
         "description": "Sample description 4",
-        "dateUploaded": "2025-05-28T16:00:00",
+        "content":[
+            {
+                "id":"012345",
+                "title":"",
+                "type":"image"
+            }
+        ],
+        "tags":[
+            "test1",
+            "cool thing",
+            "mock"
+        ],
+        "loadDate": "2025-05-28T16:00:00",
         "dateCreated": "2025-05-28T16:00:00"
     },
     {
         "id": "11499165-5176-4e5f-b6df-5c85195b7f82",
         "title": "Gallery item 5",
         "description": "Sample description 5",
-        "dateUploaded": "2025-05-28T16:00:00",
+        "content":[
+            {
+                "id":"012345",
+                "title":"",
+                "type":"image"
+            }
+        ],
+        "tags":[
+            "a lot of tags",
+            "cool thing",
+            "mock",
+            "tag test",
+            "cool thing",
+            "mock",
+            "tag test",
+            "cool thing",
+            "mock",
+            "tag test",
+            "cool thing",
+            "mock",
+            "tag test",
+            "cool thing",
+            "mock",
+            "tag test",
+            "cool thing",
+            "mock"
+        ],
+        "loadDate": "2025-05-28T16:00:00",
         "dateCreated": "2025-05-28T16:00:00"
     }
 ]
