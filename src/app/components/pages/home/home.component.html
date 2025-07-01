@@ -1,38 +1,42 @@
 <div class="page-root">
-    <div class="section-aboutme flex row">
-        <div class="col">
-            <h2>About me</h2>
-            <p>Hey there, and welcome to my website!</p>
-            <p>
-                I'm a frontend programmer with an eye for aesthetics and fine-details, dedicated to crafting great user
-                experiences.
-            </p>
-            <p>
-                I've been in the industry for almost 2 years, working with various programming languages and tech stacks 
-                with multiple fortune-500 companies, and I'm always looking to broaden my horizons and skills.
-            </p>
-            <p>
-                Outside of strictly front-end programming, I've got an interest in a little bit of everything!
-                One of main hobbies is art, primarily sketching and some painting as well as some dabbling in 3D
-                modeling, animation, and some video editing as well.
-                Much of my art-focused content can be found under the 'Art' section, with some other things to check out
-                like an avatar creator and Etsy shop!
-            </p>
-            <p>
-                I'm also very interested in different aspects of game development, and work on many of my own small game
-                projects for fun, which can be found in the 'Games' section.
-            </p>
-        </div>
-        <div class="col img-wrapper">
-            <img class="headshot" src="../../../../assets/images/about/headshot.jpg">
+    <div class="section-aboutme">
+        <h2>About me</h2>
+        <div class="aboutme-row row">
+            <div class="aboutme-left col">
+                <p>Hey there, and welcome to my website!</p>
+                <p>
+                    I'm a frontend programmer with an eye for aesthetics and fine-details, dedicated to crafting great user
+                    experiences.
+                </p>
+                <p>
+                    I've been in the industry for almost 2 years, working with various programming languages and tech stacks 
+                    with multiple fortune-500 companies, and I'm always looking to broaden my horizons and skills.
+                </p>
+                <p>
+                    Outside of strictly front-end programming, I've got an interest in a little bit of everything!
+                    One of main hobbies is art, primarily sketching and some painting as well as some dabbling in 3D
+                    modeling, animation, and some video editing as well.
+                    Much of my art-focused content can be found under the 'Art' section, with some other things to check out
+                    like an avatar creator and Etsy shop!
+                </p>
+                <p>
+                    I'm also very interested in different aspects of game development, and work on many of my own small game
+                    projects for fun, which can be found in the 'Games' section.
+                </p>
+            </div>
+            <div class="aboutme-right col img-wrapper center">
+                <img class="headshot" src="../../../../assets/images/about/headshot.jpg">
+            </div>
         </div>
     </div>
     <div class="section-skills">
         <h2>Skills</h2>
-        @for(skill of skills; track $index){
-            <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill?.label">{{skill.label}}</button>
-        }
-        <div class="skill-detail" [class.expanded]="isSkillSelected">
+        <div class="buttons-list-left">
+            @for(skill of skills; track $index){
+                <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill?.label">{{skill.label}}</button>
+            }
+        </div>
+        <div class="skill-detail subcontainer" [class.expanded]="isSkillSelected">
             <p><b>Experience:</b> {{selectedSkill?.level}}</p>
             <p>{{selectedSkill?.description}}</p>
         </div>

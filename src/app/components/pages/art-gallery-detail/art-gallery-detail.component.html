@@ -11,7 +11,7 @@
                     }
                 </div>
                 @if(currentItem.content.length > 1){
-                <div class="item-buttons flex row center-v">
+                <div class="item-buttons row center-v">
                     <button (click)="slideLeft()" [disabled]="!isMoveValid(-1)"><</button>
                     <button disabled>{{currentSlide + 1}} / {{currentItem.content.length}}</button>
                     <button (click)="slideRight()" [disabled]="!isMoveValid(1)">></button>
@@ -20,13 +20,15 @@
             </div>
             <div class="item-details">
                 <h2>{{currentItem.title}}</h2>
-                <sub>{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
-                <p>{{currentItem.description}}</p>
-                @for(tag of currentItem.tags; track $index){
-                <sup>
-                    {{tag}}@if($index < currentItem.tags.length - 1){, }
-                </sup>
-                }
+                <div class="subcontainer">
+                    <sub>{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
+                    <p>{{currentItem.description}}</p>
+                    @for(tag of currentItem.tags; track $index){
+                    <sup>
+                        {{tag}}@if($index < currentItem.tags.length - 1){, }
+                    </sup>
+                    }
+                </div>
             </div>
         </div>
     </div>
