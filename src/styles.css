@@ -1,10 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 :root{
     --mobile-sm: 420px;
     --mobile: 768px;
     --tablet: 1024px;
     --desktop: 1600px;
     --desktop-lg: 1980px;
+    --clip-rhombus: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    --clip-rhombus-noleft: polygon(0% 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
 /* Topmost rules */
 html{
@@ -65,7 +66,7 @@ button{
     align-items: center; */
     padding: .75rem;
     cursor: pointer;
-    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    clip-path: var(--clip-rhombus);
     background-color: grey;
     color: white;
     font-size: 1rem;
@@ -87,7 +88,7 @@ button[disabled]{
     cursor: default;
 }
 .buttons-list-left button:first-child{
-    clip-path: polygon(0% 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    clip-path: var(--clip-rhombus-noleft);
 }
 /* Headers and text */
 h1,h2,h3,h4,h5,h6,sub,sup{
@@ -95,10 +96,10 @@ h1,h2,h3,h4,h5,h6,sub,sup{
 }
 h2{
     background-color: dimgrey;
-    margin: .5rem -2rem;
+    margin: .5rem -3rem;
     margin-bottom: 0;
-    padding: 1rem 2rem;
-    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    padding: 1rem 3rem;
+    clip-path: var(--clip-rhombus);
     width: 100%;
     min-width: 15rem;
 }

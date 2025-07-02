@@ -70,7 +70,7 @@
     position: absolute;
     top: 45px;
     background: linear-gradient(180deg, #1f1f1f, transparent);
-    width: 100%;
+    width: 100vw;
     height: 70%;
     overflow: hidden;
     z-index: 50;
