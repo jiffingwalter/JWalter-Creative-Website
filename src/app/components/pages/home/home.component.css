@@ -1,11 +1,22 @@
 .aboutme-row{
     flex-wrap: wrap;
-}
-.img-wrapper{
-    max-width: 10rem;
-    img{
+    .aboutme-right{
+        width: 100%;
+        clip-path: polygon(4rem 0, 0 100%, 100% 100%, 100% 0);
+    }
+    .aboutme-left{
         width: 100%;
     }
+}
+.img-headshot{
+    background-image: url(../../../../assets/images/about/headshot.jpg);
+    background-position: center;
+    background-size: auto 150%;
+    width: 100%;
+    height: 100%;
+}
+.section-skills{
+    margin-bottom: 1rem;
 }
 .skill-detail{
     overflow: hidden;
@@ -14,6 +25,9 @@
 }
 .skill-detail.expanded{
     height: 8rem;
+}
+button{
+    margin-top: 0.5rem;
 }
 @media screen and (min-width: 768px){
     .aboutme-row{

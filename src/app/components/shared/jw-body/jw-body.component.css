@@ -1,5 +1,4 @@
 .body-root{
-    /* background-color: whitesmoke; */
     padding: 0;
     margin: 0;
     display: flex;
@@ -8,5 +7,4 @@
 }
 ::ng-deep .body-root > :not(router-outlet){
     width: 100%;
-    background-color: whitesmoke;
 }

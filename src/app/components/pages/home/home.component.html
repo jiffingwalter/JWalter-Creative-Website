@@ -2,8 +2,8 @@
     <div class="section-aboutme">
         <h2>About me</h2>
         <div class="aboutme-row row">
-            <div class="aboutme-left col">
-                <p>Hey there, and welcome to my website!</p>
+            <div class="aboutme-left col fx-slidein-left">
+                <h3>Hey there, and welcome to my website!</h3>
                 <p>
                     I'm a frontend programmer with an eye for aesthetics and fine-details, dedicated to crafting great user
                     experiences.
@@ -24,13 +24,13 @@
                     projects for fun, which can be found in the 'Games' section.
                 </p>
             </div>
-            <div class="aboutme-right col img-wrapper center">
-                <img class="headshot" src="../../../../assets/images/about/headshot.jpg">
+            <div class="aboutme-right col img-wrapper center fx-slidein-right">
+                <div class="img-headshot"></div>
             </div>
         </div>
     </div>
     <div class="section-skills">
-        <h2>Skills</h2>
+        <h2>Experience and Skills</h2>
         <div class="buttons-list-left">
             @for(skill of skills; track $index){
                 <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill?.label">{{skill.label}}</button>
