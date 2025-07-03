@@ -1,16 +1,30 @@
+/* Variables */
 :root{
+    /* Screen sizes */
     --mobile-sm: 420px;
     --mobile: 768px;
     --tablet: 1024px;
     --desktop: 1600px;
     --desktop-lg: 1980px;
+
+    /* Colors */
+    --color-highlight: #8bc34a;
+    --color-background: #1f1f1f;
+    --color-active: #808080;
+    --color-primary: #5e5e5e;
+    --color-secondary: #3d3d3d;
+    --color-text-dark: #f5f5f5;
+    --color-text-light: #1f1f1f;
+    --color-text: var(--color-text-dark);
+
+    /* Misc */
     --clip-rhombus: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
     --clip-rhombus-noleft: polygon(0% 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
 /* Topmost rules */
 html{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(31, 31, 31);
+    background-color: var(--color-background);
 }
 body{
     /* min-height: 50vh; */
@@ -55,36 +69,38 @@ body{
     align-items: center;
     justify-content: center;
 }
+.align-l{
+    align-items: flex-start;
+}
+.align-r{
+    align-items: flex-end;
+}
 
 /* Shared rules */
 .page-root{
     padding: 0 1rem;
 }
 button{
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     padding: .75rem;
     cursor: pointer;
     clip-path: var(--clip-rhombus);
-    background-color: grey;
-    color: white;
+    background: grey;
+    color: var(--color-text);
     font-size: 1rem;
     border: none;
-    transition: .075s;
-    transition-timing-function: ease-in;
+    transition: .075s ease-in;
 }
 button:hover:not([disabled]){
-    background-color: #8bc34a !important;
+    background: var(--color-highlight);
 }
 button.active:not([disabled]){
-    background-color: #8bc34a !important;
+    background: var(--color-highlight);
 }
 button:focus{
-    background-color: #8bc34a !important;
+    background: var(--color-highlight);
 }
 button[disabled]{
-    background-color: lightgrey;
+    background: lightgrey;
     cursor: default;
 }
 .buttons-list-left button:first-child{
@@ -92,10 +108,10 @@ button[disabled]{
 }
 /* Headers and text */
 h1,h2,h3,h4,h5,h6,sub,sup{
-    color: whitesmoke;
+    color: var(--color-text);
 }
 h2{
-    background-color: dimgrey;
+    background: var(--color-secondary);
     margin: .5rem -3rem;
     margin-bottom: 0;
     padding: 1rem 3rem;
@@ -105,11 +121,11 @@ h2{
 }
 p{
     margin: .5rem 0;
-    color: whitesmoke;
+    color: var(--color-text);
 }
 /* Containers */
 .subcontainer{
-    background-color: grey;
+    background: grey;
     margin: 0 -1rem;
     padding: 0 1rem;
     width: 100%;

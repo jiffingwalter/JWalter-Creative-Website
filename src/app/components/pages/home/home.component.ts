@@ -11,8 +11,6 @@ import { SkillItem } from '@interfaces/skill-item.interface';
 export class HomeComponent {
   constructor() {
   }
-  selectedSkill: SkillItem | null = null;
-  isSkillSelected: boolean = false;
   skills: Array<SkillItem> = [
     {
       label: 'HTML/CSS',
@@ -55,6 +53,8 @@ export class HomeComponent {
       description: 'sql experience (raw sql, postgres, snowflake)'
     },
   ];
+  selectedSkill: SkillItem = this.skills[0];
+  isSkillSelected: boolean = true;
 
   selectSkill(input: number) {
     let clickedSkill = this.skills[input];

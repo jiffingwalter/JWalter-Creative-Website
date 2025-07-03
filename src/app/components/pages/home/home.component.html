@@ -1,5 +1,5 @@
 <div class="page-root">
-    <div class="section-aboutme">
+    <section class="section-aboutme">
         <h2>About me</h2>
         <div class="aboutme-row row">
             <div class="aboutme-left col fx-slidein-left">
@@ -28,20 +28,22 @@
                 <div class="img-headshot"></div>
             </div>
         </div>
-    </div>
-    <div class="section-skills">
+    </section>
+    <section class="section-skills">
         <h2>Experience and Skills</h2>
-        <div class="buttons-list-left">
-            @for(skill of skills; track $index){
-                <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill?.label">{{skill.label}}</button>
-            }
+        <div class="skills-wrapper row">
+            <div class="skills-list col align-l">
+                @for(skill of skills; track $index){
+                    <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill.label">{{skill.label}}</button>
+                }
+            </div>
+            <div class="skill-detail col subcontainer expanded">
+                <p><b>Experience:</b> {{selectedSkill.level}}</p>
+                <p>{{selectedSkill.description}}</p>
+            </div>
         </div>
-        <div class="skill-detail subcontainer" [class.expanded]="isSkillSelected">
-            <p><b>Experience:</b> {{selectedSkill?.level}}</p>
-            <p>{{selectedSkill?.description}}</p>
-        </div>
-    </div>
-    <div class="section-">
+    </section>
+    <section class="section-">
 
-    </div>
+    </section>
 </div>

@@ -17,6 +17,21 @@
 }
 .section-skills{
     margin-bottom: 1rem;
+    position: relative;
+
+    .list-gradient{
+        position: absolute;
+        z-index: 10;
+        left: -16rem;
+        background: linear-gradient(90deg, var(--color-background) 40%, transparent 60%);
+        width: 50%;
+        height: -webkit-fill-available;
+        pointer-events: none;
+    }
+    .skills-list button{
+        width: 30%;
+        min-width: 18rem;
+    }
 }
 .skill-detail{
     overflow: hidden;
