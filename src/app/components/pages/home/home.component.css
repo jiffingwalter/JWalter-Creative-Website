@@ -28,24 +28,59 @@
         height: -webkit-fill-available;
         pointer-events: none;
     }
-    .skills-list button{
-        width: 30%;
-        min-width: 18rem;
+    .skills-wrapper{
+        width: 100%;
+
+        .skills-list{
+            width:80%;
+
+            .skill{
+                width: 100%;
+                height: 8rem;
+                margin-top: 0.5rem;
+                padding: 0;
+                min-width: 18rem;
+                position: relative;
+                background: transparent;
+
+                .skill-overlay{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    transition: .5s translate ease-in-out, .075s background ease-out;
+                    background: var(--color-primary);
+                }
+                .skill-detail{
+                    clip-path: var(--clip-rhombus);
+                    background: var(--color-secondary);
+                    width: 95%;
+                    height: 7rem;
+                }
+            }
+            .skill.active{
+                cursor: default;
+                pointer-events: none;
+            }
+            .skill.active .skill-overlay,.skill:hover .skill-overlay{
+                background: var(--color-active);
+            }
+            .skill.active:nth-child(even) .skill-overlay{
+                translate: 150%;
+            }
+            .skill.active:nth-child(odd) .skill-overlay{
+                translate: -150%;
+            }
+        }
     }
-}
-.skill-detail{
-    overflow: hidden;
-    transition: height .25s;
-    height: 0rem;
-}
-.skill-detail.expanded{
-    height: 8rem;
-}
-button{
-    margin-top: 0.5rem;
 }
 @media screen and (min-width: 768px){
     .aboutme-row{
         flex-wrap: nowrap;
+    }
+    .skills-list .skill{
+        width: 50% !important;
     }
 }

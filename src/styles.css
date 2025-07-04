@@ -56,11 +56,11 @@ body{
     display: flex;
     flex-direction: row;
 }
-.center-h{
+.center-v{
     display: flex;
     align-items: center;
 }
-.center-v{
+.center-h{
     display: flex;
     justify-content: center;
 }
@@ -70,10 +70,20 @@ body{
     justify-content: center;
 }
 .align-l{
+    display: flex;
     align-items: flex-start;
 }
 .align-r{
+    display: flex;
     align-items: flex-end;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nowrap{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 /* Shared rules */
@@ -106,6 +116,7 @@ button[disabled]{
 .buttons-list-left button:first-child{
     clip-path: var(--clip-rhombus-noleft);
 }
+
 /* Headers and text */
 h1,h2,h3,h4,h5,h6,sub,sup{
     color: var(--color-text);

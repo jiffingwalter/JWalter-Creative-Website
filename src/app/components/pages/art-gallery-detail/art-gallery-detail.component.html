@@ -11,7 +11,7 @@
                     }
                 </div>
                 @if(currentItem.content.length > 1){
-                <div class="item-buttons row center-v">
+                <div class="item-buttons row center-h">
                     <button (click)="slideLeft()" [disabled]="!isMoveValid(-1)"><</button>
                     <button disabled>{{currentSlide + 1}} / {{currentItem.content.length}}</button>
                     <button (click)="slideRight()" [disabled]="!isMoveValid(1)">></button>

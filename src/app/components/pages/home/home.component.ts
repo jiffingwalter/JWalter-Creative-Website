@@ -54,15 +54,27 @@ export class HomeComponent {
     },
   ];
   selectedSkill: SkillItem = this.skills[0];
-  isSkillSelected: boolean = true;
+  isAnySkillSelected: boolean = false;
+  showAllSkills: boolean = false;
 
   selectSkill(input: number) {
     let clickedSkill = this.skills[input];
-    if (this.isSkillSelected === true && clickedSkill.label === this.selectedSkill?.label)
-      this.isSkillSelected = false;
+    if (this.isAnySkillSelected === true && clickedSkill.label === this.selectedSkill?.label)
+      this.isAnySkillSelected = false;
     else
-      this.isSkillSelected = true;
+      this.isAnySkillSelected = true;
 
     this.selectedSkill = clickedSkill;
+  }
+
+  showSkill(label: string){
+    return ((this.isAnySkillSelected && label === this.selectedSkill.label) || this.showAllSkills);
+  }
+
+  toggleShowAllSkills(){
+    if (!this.showAllSkills)
+      this.isAnySkillSelected = false;
+    
+    return this.showAllSkills = !this.showAllSkills;
   }
 }

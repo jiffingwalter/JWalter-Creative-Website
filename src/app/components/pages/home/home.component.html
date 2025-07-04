@@ -31,15 +31,20 @@
     </section>
     <section class="section-skills">
         <h2>Experience and Skills</h2>
-        <div class="skills-wrapper row">
-            <div class="skills-list col align-l">
+        <div class="skills-wrapper col center-v">
+            <button (click)="toggleShowAllSkills()">Show All</button>
+            <div class="skills-list wrap center">
                 @for(skill of skills; track $index){
-                    <button (click)="selectSkill($index)" [class.active]="isSkillSelected && skill.label === selectedSkill.label">{{skill.label}}</button>
+                    <button class="skill center" (focus)="selectSkill($index)" [class.active]="showSkill(skill.label)">
+                        <div class="skill-detail">
+                            <sub>{{skill.level}}</sub>
+                            <p>{{skill.description}}</p>
+                        </div>
+                        <div class="skill-overlay center">
+                            <p>{{skill.label}}</p>
+                        </div>
+                    </button>
                 }
-            </div>
-            <div class="skill-detail col subcontainer expanded">
-                <p><b>Experience:</b> {{selectedSkill.level}}</p>
-                <p>{{selectedSkill.description}}</p>
             </div>
         </div>
     </section>
