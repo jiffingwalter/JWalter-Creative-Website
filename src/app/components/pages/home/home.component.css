@@ -1,19 +1,34 @@
-.aboutme-row{
-    flex-wrap: wrap;
-    .aboutme-right{
-        width: 100%;
-        clip-path: polygon(4rem 0, 0 100%, 100% 100%, 100% 0);
+.section-aboutme{
+    .aboutme-row{
+        flex-wrap: wrap;
+        position: relative;
+
+        .aboutme-left{
+            width: 100%;
+            background: linear-gradient(90deg, var(--color-background), #1f1f1f88);
+            z-index: 10;
+        }
+        .aboutme-right{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            .img-wrapper{
+                clip-path: polygon(4rem 0, 0 100%, 100% 100%, 100% 0);
+                width: 100%;
+                max-width: 25rem;
+                height: 100%;
+
+                .img-headshot{
+                    background-image: url(../../../../assets/images/about/headshot.jpg);
+                    background-position: center;
+                    background-size: auto 150%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
-    .aboutme-left{
-        width: 100%;
-    }
-}
-.img-headshot{
-    background-image: url(../../../../assets/images/about/headshot.jpg);
-    background-position: center;
-    background-size: auto 150%;
-    width: 100%;
-    height: 100%;
 }
 .section-skills{
     margin-bottom: 1rem;
@@ -35,8 +50,9 @@
             width:80%;
 
             .skill{
+                --skill-container-height: 10rem;
                 width: 100%;
-                height: 8rem;
+                height: var(--skill-container-height);
                 margin-top: 0.5rem;
                 padding: 0;
                 min-width: 18rem;
@@ -57,7 +73,11 @@
                     clip-path: var(--clip-rhombus);
                     background: var(--color-secondary);
                     width: 95%;
-                    height: 7rem;
+                    height: var(--skill-container-height);
+
+                    p{
+                        margin: .5rem 1.5rem;
+                    }
                 }
             }
             .skill.active{
@@ -74,11 +94,30 @@
                 translate: -150%;
             }
         }
+
+        button.showall-skills{
+            width: 80%;
+            margin-top: 0.5rem;
+        }
     }
 }
 @media screen and (min-width: 768px){
     .aboutme-row{
-        flex-wrap: nowrap;
+        /* flex-wrap: nowrap !important; */
+        /* position: static !important; */
+
+        .aboutme-left{
+            background: linear-gradient(90deg, var(--color-background), transparent) !important;
+            
+            p {
+                width: 60% !important;
+            }
+        }
+        .aboutme-right{
+            /* max-width: 30rem !important; */
+            /* height: unset !important; */
+            /* position: static !important; */
+        }
     }
     .skills-list .skill{
         width: 50% !important;

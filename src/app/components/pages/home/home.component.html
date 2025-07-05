@@ -24,15 +24,17 @@
                     projects for fun, which can be found in the 'Games' section.
                 </p>
             </div>
-            <div class="aboutme-right col img-wrapper center fx-slidein-right">
-                <div class="img-headshot"></div>
+            <div class="aboutme-right col align-r fx-slidein-right">
+                <div class="img-wrapper">
+                    <div class="img-headshot"></div>
+                </div>
             </div>
         </div>
     </section>
     <section class="section-skills">
         <h2>Experience and Skills</h2>
         <div class="skills-wrapper col center-v">
-            <button (click)="toggleShowAllSkills()">Show All</button>
+            <button class="showall-skills" (click)="toggleShowAllSkills()">Show All</button>
             <div class="skills-list wrap center">
                 @for(skill of skills; track $index){
                     <button class="skill center" (focus)="selectSkill($index)" [class.active]="showSkill(skill.label)">
