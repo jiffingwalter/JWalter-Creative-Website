@@ -37,7 +37,7 @@ export class ArtGalleryDetailComponent {
     if (this.isMoveValid(-1)){
       this.currentSlide--;
       return true;
-    }else
+    } else
       return false;
   }
 
@@ -45,7 +45,7 @@ export class ArtGalleryDetailComponent {
     if (this.isMoveValid(1)){
       this.currentSlide++;
       return true;
-    }else
+    } else
       return false;
   }
 

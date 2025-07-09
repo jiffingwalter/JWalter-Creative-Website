@@ -6,7 +6,7 @@
                 <div #mediaContainer role="button" tabindex="0" class="media-container" [class.expanded]="mediaExpanded" (click)="toggleMediaExpanded()">
                     @for(slide of currentItem.content; track $index){
                         @if($index == currentSlide){
-                            <img src="../../../../assets/images/gallery/no-thumbnail.jpg">
+                            <img src="../../../../assets/images/gallery/{{currentItem.content[$index].id}}.jpg" alt="Image {{$index}} of {{this.currentItem.content.length}}: {{currentItem.content[$index].title || 'No alt text provided'}}"> 
                         }
                     }
                 </div>
@@ -21,10 +21,12 @@
             <div class="item-details">
                 <h2>{{currentItem.title}}</h2>
                 <div class="subcontainer">
-                    <sub>{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
-                    <p>{{currentItem.description}}</p>
+                    <sub class="item-date">{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
+                    <div class="item-description">
+                        <p>{{currentItem.description}}</p>
+                    </div>
                     @for(tag of currentItem.tags; track $index){
-                    <sup>
+                    <sup class="item-tags">
                         {{tag}}@if($index < currentItem.tags.length - 1){, }
                     </sup>
                     }

@@ -27,6 +27,9 @@
         margin-top: 0;
     }
 }
+.item-description{
+    margin: 1rem 0;
+}
 .media-container{
     width: 100%;
     display: flex;
@@ -34,10 +37,12 @@
     align-items: center;
 }
 .media-container img{
-    width: 100%;
+    width: max-content;
     max-width: 80vh;
+    max-height: 80vh;
     cursor: pointer;
 }
 .media-container.expanded img{
     max-width: 100%;
+    max-height: unset;
 }
