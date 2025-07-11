@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageCarouselComponent } from './image-carousel.component';
+import { MediaCarouselComponent } from './media-carousel.component';
 
 describe('ImageCarouselComponent', () => {
-  let component: ImageCarouselComponent;
-  let fixture: ComponentFixture<ImageCarouselComponent>;
+  let component: MediaCarouselComponent;
+  let fixture: ComponentFixture<MediaCarouselComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImageCarouselComponent]
+      imports: [MediaCarouselComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ImageCarouselComponent);
+    fixture = TestBed.createComponent(MediaCarouselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

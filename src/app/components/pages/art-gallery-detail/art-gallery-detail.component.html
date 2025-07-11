@@ -3,20 +3,7 @@
     <div class="section-item">
         <div class="item-wrapper">
             <div class="item-media">
-                <div #mediaContainer role="button" tabindex="0" class="media-container" [class.expanded]="mediaExpanded" (click)="toggleMediaExpanded()">
-                    @for(slide of currentItem.content; track $index){
-                        @if($index == currentSlide){
-                            <img src="../../../../assets/images/gallery/{{currentItem.content[$index].id}}.jpg" alt="Image {{$index}} of {{this.currentItem.content.length}}: {{currentItem.content[$index].title || 'No alt text provided'}}"> 
-                        }
-                    }
-                </div>
-                @if(currentItem.content.length > 1){
-                <div class="item-buttons row center-h">
-                    <button (click)="slideLeft()" [disabled]="!isMoveValid(-1)"><</button>
-                    <button disabled>{{currentSlide + 1}} / {{currentItem.content.length}}</button>
-                    <button (click)="slideRight()" [disabled]="!isMoveValid(1)">></button>
-                </div>
-                }
+                <app-media-carousel [mediaArray]="currentItem.content"></app-media-carousel>
             </div>
             <div class="item-details">
                 <h2>{{currentItem.title}}</h2>
