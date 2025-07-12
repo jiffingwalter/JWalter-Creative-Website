@@ -72,10 +72,12 @@ body{
 .align-l{
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
 }
 .align-r{
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 .wrap{
     display: flex;
@@ -122,14 +124,18 @@ button[disabled]{
 h1,h2,h3,h4,h5,h6,sub,sup{
     color: var(--color-text);
 }
-h2{
+.banner-primary{
     background: var(--color-secondary);
-    margin: .5rem -3rem;
-    margin-bottom: 0;
-    padding: 1rem 3rem;
-    clip-path: var(--clip-rhombus);
-    width: 100%;
-    min-width: 15rem;
+    margin: 0.5rem -1rem;
+    padding: 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+    .banner-primary{
+        margin: .5rem -3rem;
+        margin-bottom: 0;
+        padding: 1rem 3rem;
+        clip-path: var(--clip-rhombus);
+    }
 }
 p{
     margin: .5rem 0;

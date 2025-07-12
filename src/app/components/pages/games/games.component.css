@@ -1,0 +1,32 @@
+.project-item {
+    background-position: 50%;
+    background-size: auto 225%;
+    background-repeat: no-repeat;
+    clip-path: var(--clip-rhombus);
+    position: relative;
+
+    .project-info {
+        height: 100%;
+        padding: 2rem;
+        background: linear-gradient(90deg, var(--color-secondary) 25%, transparent 75%);
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            margin: .5rem 0;
+        }
+    }
+
+    .project-background {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        z-index: 5;
+
+        img {
+            width: 80%;
+        }
+    }
+}
