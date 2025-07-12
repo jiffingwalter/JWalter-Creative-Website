@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProjectItem } from '@classes/project-item.class';
 
 @Component({
   selector: 'app-games',

@@ -87,6 +87,10 @@ body{
     display: flex;
     flex-wrap: nowrap;
 }
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Shared rules */
 .page-root{
