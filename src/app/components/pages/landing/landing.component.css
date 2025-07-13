@@ -34,20 +34,27 @@ h1{
     h1{
         text-shadow: 0 0 1rem black;
         filter: drop-shadow(0 0 1rem black);
+        white-space: nowrap;
+        font-size: 1rem;
+        transition: font-size .25s;
     }
 }
 .tab:hover,.tab:focus-within{
     height: 24rem;
     width: 100%;
     filter: opacity(1);
+
+    h1{
+        font-size: 2rem;
+    }
+}
+.tab-home{
+    background-image: url(../../../../assets/images/about/headshot.jpg);
 }
 .tab-art{
     background-image: url(../../../../assets/images/landing/landing-tab-art.jpg);
 }
-.tab-games{
-    background-image: url(../../../../assets/images/landing/landing-tab-games.jpg);
-}
-.tab-code{
+.tab-projects{
     background-image: url(../../../../assets/images/landing/landing-tab-code.jpg);
 }
 
