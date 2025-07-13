@@ -44,10 +44,15 @@ export const routes: Routes = [
         loadComponent: () => import('./components/pages/art-etsy/art-etsy.component').then(m => m.ArtEtsyComponent),
         data: { type: 'secondary' }
     },
-    { path: 'games',
+    { path: 'projects', 
+        title: "Projects", 
+        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        data: { type: 'primary' }
+    },
+    { path: 'projects/games',
         loadComponent: () => import('./components/pages/games/games.component').then(m => m.GamesComponent),
         title: "Games",
-        data: { type: 'primary' }
+        data: { type: 'secondary' }
     },
     // { path: 'games/projects', 
         // title: "Game Projects", 
@@ -59,10 +64,10 @@ export const routes: Routes = [
         // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
         // data: { type: 'secondary' }
     // },
-    { path: 'code',
+    { path: 'projects/code',
         title: "Code",
         loadComponent: () => import('./components/pages/code/code.component').then(m => m.CodeComponent),
-        data: { type: 'primary' }
+        data: { type: 'secondary' }
     },
     // { path: 'code/projects', 
         // title: "Code Projects", 

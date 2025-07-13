@@ -16,7 +16,7 @@ export class GalleryService {
   async getGalleryItems(): Promise<GalleryItem[]> {
     return await firstValueFrom(
       this.http.get<GalleryItem[]>('./../../assets/data/json/mockGalleryItems.json')
-      //this.http.get<GalleryItem[]>(this.api + '/v1/get-gallery-items')
+      //this.http.get<GalleryItem[]>(`${this.api}/v1/get-gallery-items`)
     );
   }
 
@@ -28,4 +28,8 @@ export class GalleryService {
     }
     return null;
   }
+  // LIVE
+  //return await firstValueFrom(
+  //  //this.http.get<GalleryItem[]>(`${this.api}/v1/get-gallery-items/${idIn}`)
+  //);
 }

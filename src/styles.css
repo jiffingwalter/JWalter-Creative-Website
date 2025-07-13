@@ -8,7 +8,7 @@
     --desktop-lg: 1980px;
 
     /* Colors */
-    --color-highlight: #8bc34a;
+    --color-highlight: #7aa549;
     --color-background: #1f1f1f;
     --color-active: #808080;
     --color-primary: #5e5e5e;
@@ -41,7 +41,7 @@ body{
     }
 }
 
-/* Utility rules */
+/* Utility: flex shortcuts */
 .hidden{
     visibility: hidden;
 }
@@ -72,10 +72,12 @@ body{
 .align-l{
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
 }
 .align-r{
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 .wrap{
     display: flex;
@@ -84,6 +86,10 @@ body{
 .nowrap{
     display: flex;
     flex-wrap: nowrap;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Shared rules */
@@ -94,7 +100,7 @@ button{
     padding: .75rem;
     cursor: pointer;
     clip-path: var(--clip-rhombus);
-    background: grey;
+    background: var(--color-primary);
     color: var(--color-text);
     font-size: 1rem;
     border: none;
@@ -110,7 +116,8 @@ button:focus{
     background: var(--color-highlight);
 }
 button[disabled]{
-    background: lightgrey;
+    background: #b8b8b8;
+    color: var(--color-primary);
     cursor: default;
 }
 .buttons-list-left button:first-child{
@@ -121,22 +128,37 @@ button[disabled]{
 h1,h2,h3,h4,h5,h6,sub,sup{
     color: var(--color-text);
 }
-h2{
+.banner-primary{
     background: var(--color-secondary);
-    margin: .5rem -3rem;
-    margin-bottom: 0;
-    padding: 1rem 3rem;
-    clip-path: var(--clip-rhombus);
-    width: 100%;
-    min-width: 15rem;
+    margin: 0.5rem -1rem;
+    padding: 1rem 1rem;
 }
-p{
+@media screen and (min-width: 768px) {
+    .banner-primary{
+        margin: .5rem -3rem;
+        margin-bottom: 0;
+        padding: 1rem 3rem;
+        clip-path: var(--clip-rhombus);
+    }
+}
+.banner-secondary{
+    background: var(--color-primary);
+    margin: 0.5rem -1rem;
+    padding: 1rem 2rem;
+    clip-path: var(--clip-rhombus);
+}
+p,label{
     margin: .5rem 0;
     color: var(--color-text);
 }
+select{
+    padding: .25rem;
+    min-width: 8rem;
+}
+
 /* Containers */
 .subcontainer{
-    background: grey;
+    background: var(--color-primary);
     margin: 0 -1rem;
     padding: 0 1rem;
     width: 100%;

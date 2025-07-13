@@ -1,1 +1,51 @@
-<p>art-avatarcreator works!</p>
+<div class="page-root">
+    <h2 class="banner-primary">Avatar Creator (old)</h2>
+    <section class="avatar-creator row wrap center">
+        <div class="avatar-display" #avatarDisplayWindow>
+            <img src="../../../../assets/images/avatarcreator/body/bodyBasic.png" class="base" #avatarBody>
+            <img src="../../../../assets/images/avatarcreator/head/head{{selectedHead}}.png" class="overlay" #avatarHead>
+            <img src="../../../../assets/images/avatarcreator/mouth/mouth{{selectedMouth}}.png" class="overlay" #avatarMouth>
+            <img src="../../../../assets/images/avatarcreator/nose/nose{{selectedNose}}.png" class="overlay" #avatarNose>
+            <img src="../../../../assets/images/avatarcreator/eyes/eyes{{selectedEyes}}.png" class="overlay" #avatarEyes>
+            <img src="../../../../assets/images/avatarcreator/hair/hair{{selectedHair}}.png" class="overlay" #avatarHair>
+        </div>
+        <div class="avatar-options">
+            <h3 class="banner-secondary">Avatar features</h3>
+            <form>
+                <label for="optionHead"><b>Head</b></label><br>
+                <select name="optionHead" id="optionHead" #optionHead (change)="selectedHead = optionHead.value">
+                    @for(option of headOptions; track $index){
+                        <option value="{{option}}">{{option}}</option>
+                    }
+                </select>
+                <br><br>
+                <label for="optionHair"><b>Hair</b></label><br>
+                <select name="optionHair" id="optionHair" #optionHair (change)="selectedHair = optionHair.value">
+                    @for(option of hairOptions; track $index){
+                        <option value="{{option}}">{{option}}</option>
+                    }
+                </select>
+                <br><br>
+                <label for="optionEyes"><b>Eyes</b></label><br>
+                <select name="optionEyes" id="optionEyes" #optionEyes (change)="selectedEyes = optionEyes.value">
+                    @for(option of eyesOptions; track $index){
+                        <option value="{{option}}">{{option}}</option>
+                    }
+                </select>
+                <br><br>
+                <label for="optionNose"><b>Nose</b></label><br>
+                <select name="optionNose" id="optionNose" #optionNose (change)="selectedNose = optionNose.value">
+                    @for(option of noseOptions; track $index){
+                        <option value="{{option}}">{{option}}</option>
+                    }
+                </select><br><br>
+                <label for="optionMouth"><b>Mouth</b></label><br>
+                <select name="optionMouth" id="optionMouth" #optionMouth (change)="selectedMouth = optionMouth.value">
+                    @for(option of mouthOptions; track $index){
+                        <option value="{{option}}">{{option}}</option>
+                    }
+                </select><br><br>
+            </form>
+        </div>
+    </section>
+</div>

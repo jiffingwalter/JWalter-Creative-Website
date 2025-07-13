@@ -3,28 +3,17 @@
     <div class="section-item">
         <div class="item-wrapper">
             <div class="item-media">
-                <div #mediaContainer role="button" tabindex="0" class="media-container" [class.expanded]="mediaExpanded" (click)="toggleMediaExpanded()">
-                    @for(slide of currentItem.content; track $index){
-                        @if($index == currentSlide){
-                            <img src="../../../../assets/images/gallery/no-thumbnail.jpg">
-                        }
-                    }
-                </div>
-                @if(currentItem.content.length > 1){
-                <div class="item-buttons row center-h">
-                    <button (click)="slideLeft()" [disabled]="!isMoveValid(-1)"><</button>
-                    <button disabled>{{currentSlide + 1}} / {{currentItem.content.length}}</button>
-                    <button (click)="slideRight()" [disabled]="!isMoveValid(1)">></button>
-                </div>
-                }
+                <app-media-carousel [mediaArray]="currentItem.content"></app-media-carousel>
             </div>
             <div class="item-details">
-                <h2>{{currentItem.title}}</h2>
+                <h2 class="banner-primary">{{currentItem.title}}</h2>
                 <div class="subcontainer">
-                    <sub>{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
-                    <p>{{currentItem.description}}</p>
+                    <sub class="item-date">{{currentItem.dateCreated | date: 'M/d/y'}}</sub>
+                    <div class="item-description">
+                        <p>{{currentItem.description}}</p>
+                    </div>
                     @for(tag of currentItem.tags; track $index){
-                    <sup>
+                    <sup class="item-tags">
                         {{tag}}@if($index < currentItem.tags.length - 1){, }
                     </sup>
                     }

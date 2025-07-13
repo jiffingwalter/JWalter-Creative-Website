@@ -5,7 +5,7 @@
         "description": "sample description",
         "content":[
             {
-                "id":"012345",
+                "id":"test-size-md",
                 "title":"image 1",
                 "type":"image"
             }
@@ -24,17 +24,17 @@
         "description": "Sample description 2",
         "content":[
             {
-                "id":"246801",
+                "id":"test-size-lg",
                 "title":"image 1",
                 "type":"image"
             },
             {
-                "id":"098765",
+                "id":"test-size-md",
                 "title":"image 2",
                 "type":"image"
             },
             {
-                "id":"135790",
+                "id":"test-size-sm",
                 "title":"image 3",
                 "type":"image"
             }
@@ -52,22 +52,22 @@
         "description": "Sample description 3",
         "content":[
             {
-                "id":"012345",
+                "id":"test-size-wide",
                 "title":"image 1",
                 "type":"image"
             },
             {
-                "id":"246801",
+                "id":"test-size-sm",
                 "title":"image 1",
                 "type":"image"
             },
             {
-                "id":"098765",
+                "id":"test-size-tall",
                 "title":"image 2",
                 "type":"image"
             },
             {
-                "id":"135790",
+                "id":"test-size-lg",
                 "title":"image 3",
                 "type":"image"
             }
@@ -83,7 +83,7 @@
         "description": "Sample description 4",
         "content":[
             {
-                "id":"012345",
+                "id":"test-size-lg",
                 "title":"",
                 "type":"image"
             }
@@ -102,7 +102,7 @@
         "description": "Sample description 5",
         "content":[
             {
-                "id":"012345",
+                "id":"test-size-tall",
                 "title":"",
                 "type":"image"
             }

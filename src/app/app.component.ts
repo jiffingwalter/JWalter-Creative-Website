@@ -1,7 +1,7 @@
 import { Component, computed, Signal } from '@angular/core';
-import { JwHeaderComponent } from './components/shared/jw-header/jw-header.component';
-import { JwBodyComponent } from './components/shared/jw-body/jw-body.component';
-import { JwFooterComponent } from './components/shared/jw-footer/jw-footer.component';
+import { JwHeaderComponent } from './components/core/jw-header/jw-header.component';
+import { JwBodyComponent } from './components/core/jw-body/jw-body.component';
+import { JwFooterComponent } from './components/core/jw-footer/jw-footer.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
 import { NavService } from '@services/nav.service';
 

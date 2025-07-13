@@ -1,0 +1,50 @@
+[
+    {
+        "id":"tale-of-essence-mock",
+        "title":"Tale of Essence",
+        "description":"A linear action-adventure RPG where you take the role of Eliza to defeat shadowy monsters and prevent the end of the world",
+        "pageBody":"<h1>Tale of Essence</h1>",
+        "type":"game",
+        "meta":"Action-Adventure",
+        "mediaContent":[
+            {
+                "id":"test-size-md",
+                "title":"image 1",
+                "type":"image"
+            }
+        ],
+        "dateCreated":"2025-07-12T16:00:00"
+    },
+    {
+        "id":"galaxy-conquerers-mock",
+        "title":"Galaxy Conquerers",
+        "description":"Fight off waves of aliens ships, monsters, and more in this recreation of Space Invaders in JavaScript",
+        "pageBody":"<h1>Galaxy Conquerers</h1>",
+        "type":"game",
+        "meta":"Shoot 'em Up",
+        "mediaContent":[
+            {
+                "id":"test-size-md",
+                "title":"image 1",
+                "type":"image"
+            }
+        ],
+        "dateCreated":"2025-07-12T16:00:00"
+    },
+    {
+        "id":"bonanzai-mock",
+        "title":"Bonanzai!",
+        "description":"Grow your own living Bonsais from tiny sproutlings to florishing plants to sell and compete with!",
+        "pageBody":"<h1>Bonanzai!</h1>",
+        "type":"game",
+        "meta":"Pet Simulator",
+        "mediaContent":[
+            {
+                "id":"test-size-md",
+                "title":"image 1",
+                "type":"image"
+            }
+        ],
+        "dateCreated":"2025-07-12T16:00:00"
+    }
+]
