@@ -1,0 +1,23 @@
+.avatar-display{
+    position: relative;
+    width: 100%;
+    max-width: fit-content;
+    background-color: var(--color-primary);
+
+    img{
+        width: 100%;
+    }
+    .base{
+        position: static;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.avatar-options{
+    form{
+        margin: 1rem;
+    }
+}
