@@ -2,18 +2,21 @@
     background-position: 50%;
     background-size: auto 225%;
     background-repeat: no-repeat;
+    margin: 1rem 0;
     clip-path: var(--clip-rhombus);
-    position: relative;
     cursor: pointer;
 
     .project-info {
         height: 100%;
         padding: 2rem;
         background: linear-gradient(90deg, var(--color-secondary) 25%, transparent 100%);
+        flex-wrap: wrap;
         opacity: 100%;
         transition: opacity .1s ease-in;
 
         .info-left{
+            min-width: 12rem;
+
             h2 {
                 margin: 0;
             }
@@ -22,14 +25,14 @@
             }
         }
         .info-right{
+            max-width: 42rem;
             p{
                 transition: opacity .1s ease-in;
-                opacity: 0%;
             }
         }
     }
 
-    .project-background {
+    /* .project-background {
         position: absolute;
         top: -50%;
         right: 0;
@@ -38,7 +41,7 @@
         img {
             width: 80%;
         }
-    }
+    } */
 }
 .project-item:hover, .project-item:focus{
     .project-info{
@@ -48,6 +51,14 @@
             p{
                 opacity: 100%;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 520px) {
+    .project-item{
+        .project-info{
+            flex-wrap: nowrap;
         }
     }
 }

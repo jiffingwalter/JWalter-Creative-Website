@@ -41,7 +41,7 @@ body{
     }
 }
 
-/* Utility rules */
+/* Utility: flex shortcuts */
 .hidden{
     visibility: hidden;
 }
@@ -145,6 +145,7 @@ p{
     margin: .5rem 0;
     color: var(--color-text);
 }
+
 /* Containers */
 .subcontainer{
     background: var(--color-primary);
