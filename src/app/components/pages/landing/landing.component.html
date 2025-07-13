@@ -1,7 +1,15 @@
 <div class="landing-root">
-    <h1>Choose your flavor</h1>
+    <h1>Choose your path</h1>
     <!--TODO: if on mobile, focus the tab on press before going to the site-->
     <div class="landing-tabs">
+        <div class="tab tab-home" role="button" tabindex="0"
+            (focus)="setTitle('About Me','focus')"
+            (blur)="unsetTitle()"
+            (mouseenter)="setTitle('About Me','mouse')"
+            (mouseleave)="unsetTitle()"
+            routerLink="/home">
+            <h1>About Me</h1>
+        </div>
         <div class="tab tab-art" role="button" tabindex="0"
             (focus)="setTitle('Art','focus')"
             (blur)="unsetTitle()"
@@ -10,21 +18,13 @@
             routerLink="/art">
             <h1>Art</h1>
         </div>
-        <div class="tab tab-games" role="button" tabindex="0"
-            (focus)="setTitle('Games','focus')"
+        <div class="tab tab-projects" role="button" tabindex="0"
+            (focus)="setTitle('Games & Code','focus')"
             (blur)="unsetTitle()"
-            (mouseenter)="setTitle('Games','mouse')"
+            (mouseenter)="setTitle('Games & Code','mouse')"
             (mouseleave)="unsetTitle()"
-            routerLink="/games">
-            <h1>Games</h1>
-        </div>
-        <div class="tab tab-code" role="button" tabindex="0"
-            (focus)="setTitle('Code','focus')"
-            (blur)="unsetTitle()"
-            (mouseenter)="setTitle('Code','mouse')"
-            (mouseleave)="unsetTitle()"
-            routerLink="/code">
-            <h1>Code</h1>
+            routerLink="/projects">
+            <h1>Games & Code</h1>
         </div>
     </div>
     <!-- <h1>{{displayedTab}}</h1> -->
