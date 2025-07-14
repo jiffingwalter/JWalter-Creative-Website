@@ -35,11 +35,29 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
-@media screen and (max-width: 70rem){
+app-root{
+    width: 100%;
+}
+@media screen and (min-width: 70rem){
     app-root{
-        width: 100%;
+        width: unset;
     }
 }
+.root-stage{
+    width: 100%;
+}
+.page-root{
+    padding: 0;
+}
+@media screen and (min-width: 70rem){
+    .root-stage{
+        width: 70rem;
+    }
+    .page-root{
+        padding: 0 1rem;
+    }
+}
+
 
 /* Utility: flex shortcuts */
 .hidden{
@@ -93,9 +111,6 @@ body{
 }
 
 /* Shared rules */
-.page-root{
-    padding: 0 1rem;
-}
 button{
     padding: .75rem;
     cursor: pointer;
@@ -130,13 +145,12 @@ h1,h2,h3,h4,h5,h6,sub,sup{
 }
 .banner-primary{
     background: var(--color-secondary);
-    margin: 0.5rem -1rem;
+    margin: 0;
     padding: 1rem 1rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1120px) {
     .banner-primary{
-        margin: .5rem -3rem;
-        margin-bottom: 0;
+        margin: 0 -3rem;
         padding: 1rem 3rem;
         clip-path: var(--clip-rhombus);
     }
@@ -159,9 +173,7 @@ select{
 /* Containers */
 .subcontainer{
     background: var(--color-primary);
-    margin: 0 -1rem;
     padding: 0 1rem;
-    width: 100%;
     min-width: 15rem;
 }
 

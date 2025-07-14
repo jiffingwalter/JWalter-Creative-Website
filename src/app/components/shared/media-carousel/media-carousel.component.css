@@ -1,0 +1,27 @@
+.media-carousel-root{
+    width: 100%;
+}
+.media-container{
+    width: 100%;
+}
+.media-container > .image-wrapper > img{
+    width: 100%;
+    max-width: max-content;
+    max-height: 100vh;
+    cursor: pointer;
+}
+.media-container.expanded{
+    width: unset;
+
+    .image-wrapper{
+        overflow-x: auto;
+        width: 100vw;
+        max-width: max-content;
+
+        img {
+            width: unset;
+            max-width: max-content;
+            max-height: unset;
+        }
+    }
+}

@@ -2,8 +2,8 @@
     <div class="section-gallery">
         @for(item of displayedGalleryItems; track item){
         <a class="gitem-card" role="button" tabindex="0" routerLink="{{item.id}}">
-            <div class="gitem-thumb-wrapper">
-                <img class="gitem-thumbnail" src="../../../../assets/images/gallery/no-thumbnail.jpg">
+            <div class="gitem-thumb-wrapper center">
+                <img class="gitem-thumbnail" src="../../../../assets/images/gallery/{{item.content[0].id}}.jpg">
             </div>
             <div class="gitem-meta">
                 <p class="gitem-title">{{item.title}}</p>

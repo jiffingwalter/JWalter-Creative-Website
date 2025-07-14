@@ -1,8 +1,0 @@
-.root-stage{
-    width: 70rem;
-}
-@media screen and (max-width: 70rem){
-    .root-stage{
-        width: 100%;
-    }
-}

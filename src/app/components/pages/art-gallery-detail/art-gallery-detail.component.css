@@ -1,5 +1,5 @@
 .page-root{
-    padding: 0 1rem;
+    padding: 0;
 }
 .section-item{
     padding-top: 1rem;
@@ -20,6 +20,7 @@
 }
 .item-details{
     width: 100%;
+
     > h2{
         margin-top: 0;
     }

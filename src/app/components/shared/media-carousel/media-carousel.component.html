@@ -1,0 +1,18 @@
+<div class="media-carousel-root center col">
+    <div #mediaContainer role="button" tabindex="0" class="media-container center col" [class.expanded]="mediaExpanded">
+        <div class="image-wrapper" (click)="toggleMediaExpanded()">
+            @for(slide of mediaArray; track $index){
+                @if($index == currentSlide){
+                    <img src="../../../../assets/images/gallery/{{mediaArray[$index].id}}.jpg" alt="Image {{$index}} of {{this.mediaArray.length}}: {{mediaArray[$index].title || 'No alt text provided'}}"> 
+                }
+            }
+        </div>
+    </div>
+    @if(mediaArray.length > 1){
+    <div class="item-buttons center-h row">
+        <button (click)="slideLeft()" [disabled]="!isMoveValid(-1)"><</button>
+        <button disabled>{{currentSlide + 1}} / {{mediaArray.length}}</button>
+        <button (click)="slideRight()" [disabled]="!isMoveValid(1)">></button>
+    </div>
+    }
+</div>

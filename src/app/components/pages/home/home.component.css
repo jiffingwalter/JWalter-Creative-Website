@@ -4,6 +4,7 @@
         position: relative;
 
         .aboutme-left{
+            padding: 0 1rem 3rem 1rem;
             width: 100%;
             background: linear-gradient(90deg, var(--color-background), #1f1f1f88);
             z-index: 10;
