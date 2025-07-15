@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { GalleryItemContent } from '@classes/gallery-item-content.class';
+import { GalleryService } from '@services/gallery.service';
 
 @Component({
   selector: 'app-media-carousel',
@@ -9,9 +10,12 @@ import { GalleryItemContent } from '@classes/gallery-item-content.class';
   styleUrl: './media-carousel.component.css'
 })
 export class MediaCarouselComponent {
+  constructor(private galleryService:GalleryService){}
+  
   @Input() mediaArray:Array<GalleryItemContent> = [];
   currentSlide:number = 0;
   mediaExpanded:Boolean = false;
+  imagePath:String = this.galleryService.imagePath;
   @ViewChild('mediaContainer') mediaContainerElement!: ElementRef<HTMLElement>;
 
   toggleMediaExpanded() {

@@ -3,7 +3,7 @@
         <div class="image-wrapper" role="button" tabindex="0" (click)="toggleMediaExpanded()" (keypress)="toggleMediaExpanded()">
             @for(slide of mediaArray; track $index){
                 @if($index == currentSlide){
-                    <img src="../../../../assets/images/gallery/{{mediaArray[$index].id}}.jpg" alt="Image {{$index}} of {{this.mediaArray.length}}: {{mediaArray[$index].title || 'No alt text provided'}}"> 
+                    <img src="{{imagePath}}{{mediaArray[$index].id}}.{{mediaArray[$index].extention}}" alt="Image {{$index}} of {{this.mediaArray.length}}: {{mediaArray[$index].title || 'No alt text provided'}}"> 
                 }
             }
         </div>

@@ -7,6 +7,7 @@
             {
                 "id":"test-size-md",
                 "title":"image 1",
+                "extention":"jpg",
                 "type":"image"
             }
         ],
@@ -26,16 +27,19 @@
             {
                 "id":"test-size-lg",
                 "title":"image 1",
+                "extention":"jpg",
                 "type":"image"
             },
             {
                 "id":"test-size-md",
                 "title":"image 2",
+                "extention":"jpg",
                 "type":"image"
             },
             {
                 "id":"test-size-sm",
                 "title":"image 3",
+                "extention":"jpg",
                 "type":"image"
             }
         ],
@@ -54,21 +58,25 @@
             {
                 "id":"test-size-wide",
                 "title":"image 1",
+                "extention":"jpg",
                 "type":"image"
             },
             {
                 "id":"test-size-sm",
                 "title":"image 1",
+                "extention":"jpg",
                 "type":"image"
             },
             {
                 "id":"test-size-tall",
                 "title":"image 2",
+                "extention":"jpg",
                 "type":"image"
             },
             {
                 "id":"test-size-lg",
                 "title":"image 3",
+                "extention":"jpg",
                 "type":"image"
             }
         ],
@@ -85,6 +93,7 @@
             {
                 "id":"test-size-lg",
                 "title":"",
+                "extention":"jpg",
                 "type":"image"
             }
         ],
@@ -104,6 +113,7 @@
             {
                 "id":"test-size-tall",
                 "title":"",
+                "extention":"jpg",
                 "type":"image"
             }
         ],

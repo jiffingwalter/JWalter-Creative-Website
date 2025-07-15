@@ -17,6 +17,7 @@ import { GalleryService } from '@services/gallery.service';
 export class ArtGalleryComponent {
   galleryItemList:Array<GalleryItem> = [];
   displayedGalleryItems:Array<GalleryItem> = [];
+  imagePath:String = this.galleryService.imagePath;
 
   constructor(private galleryService: GalleryService) {}
 

@@ -9,6 +9,7 @@ import { environment } from 'environments/environment';
 })
 export class GalleryService {
   private api = environment.api;
+  private _imagePath:String = '../../../../assets/images/gallery/';
 
   constructor(private http: HttpClient) {
   }
@@ -32,4 +33,8 @@ export class GalleryService {
   //return await firstValueFrom(
   //  //this.http.get<GalleryItem[]>(`${this.api}/v1/get-gallery-items/${idIn}`)
   //);
+
+  get imagePath(){
+    return this._imagePath;
+  }
 }

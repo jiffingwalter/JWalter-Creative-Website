@@ -6,14 +6,17 @@ export class GalleryItemContent{
     //galleryItemId:string;
     /** Title of the content, used for alt text */
     title:string;
+    /** File extention associated to the media */
+    extention:string;
     /** Date the content was loaded into the database */
     //loadDate:Date;
 
-    constructor(id:string,type:string,galleryItemId:string,title:string,loadDate:Date){
-        this.id = id;
-        this.type = type;
-        //this.galleryItemId = galleryItemId;
-        this.title = title;
-        //this.loadDate = loadDate;
+    constructor(idIn:string,typeIn:string,galleryItemIdIn:string,titleIn:string,extentionIn:string,loadDateIn:Date){
+        this.id = idIn;
+        this.type = typeIn;
+        //this.galleryItemId = galleryItemIdIn;
+        this.extention = extentionIn;
+        this.title = titleIn;
+        //this.loadDate = loadDateIn;
     }
 }
