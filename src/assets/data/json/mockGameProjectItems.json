@@ -10,7 +10,10 @@
             {
                 "id":"test-size-md",
                 "title":"image 1",
-                "type":"image"
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"tale-of-essence-mock",
+                "loadDate":"2025-05-28T16:00:00"
             }
         ],
         "dateCreated":"2025-07-12T16:00:00"
@@ -26,7 +29,10 @@
             {
                 "id":"test-size-md",
                 "title":"image 1",
-                "type":"image"
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"galaxy-conquerers-mock",
+                "loadDate":"2025-05-28T16:00:00"
             }
         ],
         "dateCreated":"2025-07-12T16:00:00"
@@ -42,7 +48,10 @@
             {
                 "id":"test-size-md",
                 "title":"image 1",
-                "type":"image"
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"bonanzai-mock",
+                "loadDate":"2025-05-28T16:00:00"
             }
         ],
         "dateCreated":"2025-07-12T16:00:00"
