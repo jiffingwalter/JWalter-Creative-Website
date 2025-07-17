@@ -20,8 +20,10 @@ export const routes: Routes = [
         data: { type: 'primary' }
     },
     { path: 'art',
-        title: "Art",
-        loadComponent: () => import('./components/pages/art/art.component').then(m => m.ArtComponent),
+        title: 'Art',
+        redirectTo: 'art/gallery',
+        pathMatch: 'full',
+        // loadComponent: () => import('./components/pages/art/art.component').then(m => m.ArtComponent),
         data: { type: 'primary' }
     },
     { path: 'art/gallery', 
@@ -46,7 +48,9 @@ export const routes: Routes = [
     },
     { path: 'projects', 
         title: "Projects", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        redirectTo: 'projects/games',
+        pathMatch: 'full',
+        // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
         data: { type: 'primary' }
     },
     { path: 'projects/games',
