@@ -1,5 +1,5 @@
-export class GalleryItemContent{
-    /** Unique ID for the content that is used to reference the image for display */
+export class Media{
+    /** Unique ID for the content that is used to reference the media from backend */
     id:string; 
     /** Type of media of the content (image | video | audio) */
     type:string;

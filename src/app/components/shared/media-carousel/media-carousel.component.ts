@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { GalleryItemContent } from '@classes/gallery-item-content.class';
+import { GalleryItemContent } from '@classes/media.class';
 import { GalleryService } from '@services/gallery.service';
 
 @Component({

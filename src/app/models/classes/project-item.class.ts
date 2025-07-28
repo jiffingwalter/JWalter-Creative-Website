@@ -1,4 +1,4 @@
-import { GalleryItemContent } from "./gallery-item-content.class";
+import { GalleryItemContent } from "./media.class";
 
 /** Project item class for games and code projects */
 export class ProjectItem {

@@ -8,9 +8,7 @@
                 "id":"test-size-md",
                 "title":"image 1",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"1a4e6735-b8b8-430c-9dfc-0916ee50153f",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             }
         ],
         "tags":[
@@ -18,8 +16,7 @@
             "cool thing",
             "mock"
         ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "postDate": "2025-05-28T16:00:00"
     },
     {
         "id": "c4320b31-ab4e-40eb-9552-c0c0eb00e9c9",
@@ -30,33 +27,26 @@
                 "id":"test-size-lg",
                 "title":"image 1",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"c4320b31-ab4e-40eb-9552-c0c0eb00e9c9",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             },
             {
                 "id":"test-size-md",
                 "title":"image 2",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"c4320b31-ab4e-40eb-9552-c0c0eb00e9c9",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             },
             {
                 "id":"test-size-sm",
                 "title":"image 3",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"c4320b31-ab4e-40eb-9552-c0c0eb00e9c9",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             }
         ],
         "tags":[
             "item 2",
             "nice thing"
         ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "postDate": "2025-05-28T16:00:00"
     },
     {
         "id": "a69b70b7-7e21-4510-af1e-1e21e424e53f",
@@ -67,39 +57,30 @@
                 "id":"test-size-wide",
                 "title":"image 1",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"a69b70b7-7e21-4510-af1e-1e21e424e53f",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             },
             {
                 "id":"test-size-sm",
                 "title":"image 1",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"a69b70b7-7e21-4510-af1e-1e21e424e53f",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             },
             {
                 "id":"test-size-tall",
                 "title":"image 2",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"a69b70b7-7e21-4510-af1e-1e21e424e53f",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             },
             {
                 "id":"test-size-lg",
                 "title":"image 3",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"a69b70b7-7e21-4510-af1e-1e21e424e53f",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             }
         ],
         "tags":[
         ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "postDate": "2025-05-28T16:00:00"
     },
     {
         "id": "e53d3b1a-86aa-4243-8f08-49bc3460950a",
@@ -110,9 +91,7 @@
                 "id":"test-size-lg",
                 "title":"",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"e53d3b1a-86aa-4243-8f08-49bc3460950a",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             }
         ],
         "tags":[
@@ -120,8 +99,7 @@
             "cool thing",
             "mock"
         ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "postDate": "2025-05-28T16:00:00"
     },
     {
         "id": "11499165-5176-4e5f-b6df-5c85195b7f82",
@@ -132,9 +110,7 @@
                 "id":"test-size-tall",
                 "title":"",
                 "extention":"jpg",
-                "type":"image",
-                "parentId":"11499165-5176-4e5f-b6df-5c85195b7f82",
-                "loadDate":"2025-05-28T16:00:00"
+                "type":"image"
             }
         ],
         "tags":[
@@ -157,7 +133,6 @@
             "cool thing",
             "mock"
         ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "postDate": "2025-05-28T16:00:00"
     }
 ]
