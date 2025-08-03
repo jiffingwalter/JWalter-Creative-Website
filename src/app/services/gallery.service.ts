@@ -9,30 +9,32 @@ import { environment } from 'environments/environment';
 })
 export class GalleryService {
   private api = environment.api;
-  private _imagePath:String = '../../../../assets/images/gallery/';
+  private _imagePath:String = environment.imagePath;
 
   constructor(private http: HttpClient) {
   }
 
   async getGalleryItems(): Promise<GalleryItem[]> {
     return await firstValueFrom(
-      this.http.get<GalleryItem[]>('./../../assets/data/json/mockGalleryItems.json')
-      //this.http.get<GalleryItem[]>(`${this.api}/v1/get-gallery-items`)
+      //this.http.get<GalleryItem[]>('./../../assets/data/json/mockGalleryItems.json')
+      this.http.get<GalleryItem[]>(`${this.api}/v1/gallery-item/get`)
     );
   }
 
   async getGalleryItemById(idIn: string){
-    var galleryItemList = await this.getGalleryItems();
-    for (var item of galleryItemList){
-      if (item.id == idIn)
-        return item;
-    }
-    return null;
+    // MOCK
+    //var galleryItemList = await this.getGalleryItems();
+    //for (var item of galleryItemList){
+    //  if (item.id == idIn)
+    //    return item;
+    //}
+    //return null;
+
+    // LIVE
+    return await firstValueFrom(
+      this.http.get<GalleryItem>(`${this.api}/v1/gallery-item/get/${idIn}`)
+    );
   }
-  // LIVE
-  //return await firstValueFrom(
-  //  //this.http.get<GalleryItem[]>(`${this.api}/v1/get-gallery-items/${idIn}`)
-  //);
 
   get imagePath(){
     return this._imagePath;

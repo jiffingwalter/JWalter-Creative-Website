@@ -51,7 +51,6 @@ export class NavService {
         }
       }
     }
-    console.log(this.navList);
 
     /** Create listener for whenever the route changes in the application */
     this.router.events

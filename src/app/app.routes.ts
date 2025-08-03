@@ -58,6 +58,11 @@ export const routes: Routes = [
         title: "Games",
         data: { type: 'secondary' }
     },
+    { path: 'projects/games/:id', 
+        title: "Gallery Item", 
+        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        data: { type: 'hidden' }
+    },
     // { path: 'games/projects', 
         // title: "Game Projects", 
         // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
@@ -72,6 +77,11 @@ export const routes: Routes = [
         title: "Code",
         loadComponent: () => import('./components/pages/code/code.component').then(m => m.CodeComponent),
         data: { type: 'secondary' }
+    },
+    { path: 'projects/code/:id', 
+        title: "Gallery Item", 
+        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        data: { type: 'hidden' }
     },
     // { path: 'code/projects', 
         // title: "Code Projects", 

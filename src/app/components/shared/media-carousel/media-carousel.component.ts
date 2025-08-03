@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { GalleryItemContent } from '@classes/media.class';
+import { Media } from '@classes/media.class';
 import { GalleryService } from '@services/gallery.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { GalleryService } from '@services/gallery.service';
 export class MediaCarouselComponent {
   constructor(private galleryService:GalleryService){}
   
-  @Input() mediaArray:Array<GalleryItemContent> = [];
+  @Input() mediaArray:Array<Media> = [];
   currentSlide:number = 0;
   mediaExpanded:Boolean = false;
   imagePath:String = this.galleryService.imagePath;
