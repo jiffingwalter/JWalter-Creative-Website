@@ -15,7 +15,7 @@ export class MediaCarouselComponent {
   @Input() mediaArray:Array<Media> = [];
   currentSlide:number = 0;
   mediaExpanded:Boolean = false;
-  imagePath:String = this.galleryService.imagePath;
+  imagePath:String = this.galleryService.getImagePath();
   @ViewChild('mediaContainer') mediaContainerElement!: ElementRef<HTMLElement>;
 
   toggleMediaExpanded() {

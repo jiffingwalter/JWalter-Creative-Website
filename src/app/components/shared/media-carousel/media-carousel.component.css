@@ -1,5 +1,9 @@
 .media-carousel-root{
     width: 100%;
+
+    .item-buttons{
+        margin-bottom: 4px;
+    }
 }
 .media-container{
     width: 100%;

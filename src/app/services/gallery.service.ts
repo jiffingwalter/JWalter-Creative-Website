@@ -9,7 +9,7 @@ import { environment } from 'environments/environment';
 })
 export class GalleryService {
   private api = environment.api;
-  private _imagePath:String = environment.imagePath;
+  private imagePath:String = environment.imagePath;
 
   constructor(private http: HttpClient) {
   }
@@ -21,7 +21,7 @@ export class GalleryService {
     );
   }
 
-  async getGalleryItemById(idIn: string){
+  async getGalleryItemById(idIn: string): Promise<GalleryItem>{
     // MOCK
     //var galleryItemList = await this.getGalleryItems();
     //for (var item of galleryItemList){
@@ -36,7 +36,7 @@ export class GalleryService {
     );
   }
 
-  get imagePath(){
-    return this._imagePath;
+  getImagePath():String {
+    return this.imagePath;
   }
 }
