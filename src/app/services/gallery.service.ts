@@ -10,33 +10,46 @@ import { environment } from 'environments/environment';
 export class GalleryService {
   private api = environment.api;
   private imagePath:String = environment.imagePath;
+  private useMock:boolean = environment.useMockData;
 
   constructor(private http: HttpClient) {
   }
 
   async getGalleryItems(): Promise<GalleryItem[]> {
+    let resource = (this.useMock)? `./../../assets/data/json/mockGalleryItems.json` : `${this.api}/v1/gallery-item/get`;
     return await firstValueFrom(
-      //this.http.get<GalleryItem[]>('./../../assets/data/json/mockGalleryItems.json')
-      this.http.get<GalleryItem[]>(`${this.api}/v1/gallery-item/get`)
+      this.http.get<GalleryItem[]>(resource)
     );
   }
 
   async getGalleryItemById(idIn: string): Promise<GalleryItem>{
-    // MOCK
-    //var galleryItemList = await this.getGalleryItems();
-    //for (var item of galleryItemList){
-    //  if (item.id == idIn)
-    //    return item;
-    //}
-    //return null;
-
-    // LIVE
-    return await firstValueFrom(
-      this.http.get<GalleryItem>(`${this.api}/v1/gallery-item/get/${idIn}`)
-    );
+    if (this.useMock){
+      var galleryItemList = await this.getGalleryItems();
+      for (var item of galleryItemList){
+      if (item.id == idIn)
+        return item;
+      }
+      return this.getEmptyGalleryItem();
+    } else {
+      return await firstValueFrom(
+        this.http.get<GalleryItem>(`${this.api}/v1/gallery-item/get/${idIn}`)
+      );
+    }
   }
 
   getImagePath():String {
     return this.imagePath;
+  }
+
+  getEmptyGalleryItem(): GalleryItem {
+    return new GalleryItem(
+      "",
+      "",
+      "",
+      [],
+      [],
+      new Date,
+      new Date
+    );
   }
 }

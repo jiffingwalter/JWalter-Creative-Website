@@ -10,7 +10,7 @@
                 <div class="subcontainer">
                     <sub class="item-date">{{currentItem.postDate | date: 'M/d/y'}}</sub>
                     <div class="item-description">
-                        <p>{{currentItem.description}}</p>
+                        <p [innerHTML]="currentItem.description"></p>
                     </div>
                     @for(tag of currentItem.tags; track $index){
                     <sup class="item-tags">
