@@ -8,12 +8,12 @@ import { environment } from 'environments/environment';
   providedIn: 'root'
 })
 export class GalleryService {
+  constructor(private http: HttpClient) {}
+  
   private api = environment.api;
   private imagePath:String = environment.imagePath;
   private useMock:boolean = environment.useMockData;
 
-  constructor(private http: HttpClient) {
-  }
 
   async getGalleryItems(): Promise<GalleryItem[]> {
     let resource = (this.useMock)? `./../../assets/data/json/mockGalleryItems.json` : `${this.api}/v1/gallery-item/get`;
