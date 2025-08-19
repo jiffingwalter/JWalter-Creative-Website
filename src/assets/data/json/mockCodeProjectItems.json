@@ -6,7 +6,7 @@
         "pageBody":"<h1>code text body</h1>",
         "type":"code",
         "meta":"javascript",
-        "mediaContent":[
+        "media":[
             {
                 "id":"test-size-md",
                 "title":"image 1",
