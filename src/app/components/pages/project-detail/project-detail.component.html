@@ -1,0 +1,7 @@
+<section class="page-root">
+    @if(currentItem){
+    <app-media-carousel [mediaArray]="currentItem.media"></app-media-carousel>
+    <h1>{{currentItem.title}}</h1>
+    <p [innerHTML]="currentItem.pageBody"></p>
+    }
+</section>

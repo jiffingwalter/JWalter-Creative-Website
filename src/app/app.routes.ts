@@ -60,7 +60,7 @@ export const routes: Routes = [
     },
     { path: 'projects/games/:id', 
         title: "Gallery Item", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        loadComponent: () => import('./components/pages/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
         data: { type: 'hidden' }
     },
     // { path: 'games/projects', 
@@ -80,7 +80,7 @@ export const routes: Routes = [
     },
     { path: 'projects/code/:id', 
         title: "Gallery Item", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        loadComponent: () => import('./components/pages/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
         data: { type: 'hidden' }
     },
     // { path: 'code/projects', 

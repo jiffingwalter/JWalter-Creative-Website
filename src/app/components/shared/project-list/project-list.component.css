@@ -1,4 +1,6 @@
 .project-item {
+    display: block;
+    text-decoration: none;
     background-position: 50%;
     background-size: auto 225%;
     background-repeat: no-repeat;
