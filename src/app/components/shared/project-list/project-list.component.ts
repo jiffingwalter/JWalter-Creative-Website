@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ProjectItem } from '@classes/project-item.class';
+import { GalleryService } from '@services/gallery.service';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -10,5 +11,9 @@ import { RouterLink } from "@angular/router";
   styleUrl: './project-list.component.css'
 })
 export class ProjectListComponent {
+  constructor(private galleryService:GalleryService){}
   @Input() projectList:Array<ProjectItem> = [];
+
+  imagePath:String = this.galleryService.getImagePath();
+
 }

@@ -1,7 +1,7 @@
 <div class="project-list">
     @for(item of projectList; track $index){
     <a class="project-item" role="button" tabindex="0" routerLink="{{item.id}}"
-    style="background-image: url(../../../../assets/images/games/mock-entries/{{item.id}}-banner.jpg);">
+    style="background-image: url({{imagePath}}{{item.id}}-banner.jpg);">
         <div class="project-info row space-between">
             <div class="info-left">
                 <h2>{{item.title}}</h2>
