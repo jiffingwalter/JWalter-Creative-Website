@@ -3,7 +3,8 @@
         <div class="project-header align-end" style="background-image: url({{imagePath}}{{currentItem.id}}-banner.jpg);">
             <h1>{{currentItem.title}}</h1>
         </div>
-        <!-- <app-media-carousel [mediaArray]="currentItem.media"></app-media-carousel> -->
+        <p>{{currentItem.description}}</p>
+        <app-media-carousel [mediaArray]="currentItem.media"></app-media-carousel>
         <p [innerHTML]="currentItem.pageBody"></p>
     }@else {
         <h1>No project found with this ID :(</h1>

@@ -3,12 +3,44 @@
         "id":"tale-of-essence-mock",
         "title":"Tale of Essence",
         "description":"A linear action-adventure RPG where you take the role of Eliza to defeat shadowy monsters and prevent the end of the world",
-        "pageBody":"<h1>Tale of Essence</h1>",
+        "pageBody":"<p>Tale of Essence</p>",
         "type":"game",
         "meta":"Action-Adventure",
         "media":[
             {
-                "id":"tale-of-essence-mock-banner",
+                "id":"tale-of-essence-mock (1)",
+                "title":"image 1",
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"tale-of-essence-mock",
+                "loadDate":"2025-05-28T16:00:00"
+            },
+            {
+                "id":"tale-of-essence-mock (2)",
+                "title":"image 1",
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"tale-of-essence-mock",
+                "loadDate":"2025-05-28T16:00:00"
+            },
+            {
+                "id":"tale-of-essence-mock (3)",
+                "title":"image 1",
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"tale-of-essence-mock",
+                "loadDate":"2025-05-28T16:00:00"
+            },
+            {
+                "id":"tale-of-essence-mock (4)",
+                "title":"image 1",
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"tale-of-essence-mock",
+                "loadDate":"2025-05-28T16:00:00"
+            },
+            {
+                "id":"tale-of-essence-mock (5)",
                 "title":"image 1",
                 "type":"image",
                 "extention":"jpg",
@@ -22,7 +54,7 @@
         "id":"galaxy-conquerers-mock",
         "title":"Galaxy Conquerers",
         "description":"Fight off waves of aliens ships, monsters, and more in this recreation of Space Invaders in JavaScript",
-        "pageBody":"<h1>Galaxy Conquerers</h1>",
+        "pageBody":"<p>Galaxy Conquerers</p>",
         "type":"game",
         "meta":"Shoot 'em Up",
         "media":[
@@ -41,12 +73,28 @@
         "id":"bonanzai-mock",
         "title":"Bonanzai!",
         "description":"Grow your own living Bonsais from tiny sproutlings to florishing plants to sell and compete with!",
-        "pageBody":"<h1>Bonanzai!</h1>",
+        "pageBody":"<p>Bonanzai!</p>",
         "type":"game",
         "meta":"Pet Simulator",
         "media":[
             {
-                "id":"bonanzai-mock-banner",
+                "id":"bonanzai-mock (1)",
+                "title":"image 1",
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"bonanzai-mock",
+                "loadDate":"2025-05-28T16:00:00"
+            },
+            {
+                "id":"bonanzai-mock (2)",
+                "title":"image 1",
+                "type":"image",
+                "extention":"jpg",
+                "parentId":"bonanzai-mock",
+                "loadDate":"2025-05-28T16:00:00"
+            },
+            {
+                "id":"bonanzai-mock (3)",
                 "title":"image 1",
                 "type":"image",
                 "extention":"jpg",

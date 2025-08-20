@@ -3,4 +3,8 @@
     background-size: auto 225%;
     background-repeat: no-repeat;
     height: 12rem;
+
+    h1{
+        margin: 1rem;
+    }
 }
