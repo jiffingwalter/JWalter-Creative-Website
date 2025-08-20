@@ -87,14 +87,20 @@ app-root{
     align-items: center;
     justify-content: center;
 }
-.align-l{
+.align-start{
     display: flex;
     align-items: flex-start;
+}
+.justify-start{
+    display: flex;
     justify-content: flex-start;
 }
-.align-r{
+.align-end{
     display: flex;
     align-items: flex-end;
+}
+.justify-end{
+    display: flex;
     justify-content: flex-end;
 }
 .wrap{

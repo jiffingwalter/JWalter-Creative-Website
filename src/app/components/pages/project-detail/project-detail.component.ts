@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProjectItem } from '@classes/project-item.class';
 import { MediaCarouselComponent } from "@components/shared/media-carousel/media-carousel.component";
 import { ProjectService } from '@services/project.service';
+import { GalleryService } from '@services/gallery.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -14,9 +15,11 @@ import { ProjectService } from '@services/project.service';
 export class ProjectDetailComponent {
   constructor(
     private projectService:ProjectService,
-    private activeRoute:ActivatedRoute
+    private activeRoute:ActivatedRoute,
+    private galleryService:GalleryService
   ){}
   currentItem:ProjectItem | null = null;
+  imagePath:String = this.galleryService.getImagePath();
 
   async ngOnInit(){
     const id = this.activeRoute.snapshot.paramMap.get('id');
