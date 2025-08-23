@@ -22,17 +22,17 @@ export class GalleryService {
     );
   }
 
-  async getGalleryItemById(idIn: string): Promise<GalleryItem>{
+  async getGalleryItemById(idIn: string): Promise<GalleryItem | null>{
     if (this.useMock){
       var galleryItemList = await this.getGalleryItems();
       for (var item of galleryItemList){
       if (item.id == idIn)
         return item;
       }
-      return this.getEmptyGalleryItem();
+      return null;
     } else {
       return await firstValueFrom(
-        this.http.get<GalleryItem>(`${this.api}/v1/gallery-item/get/${idIn}`)
+        this.http.get<GalleryItem | null>(`${this.api}/v1/gallery-item/get/${idIn}`)
       );
     }
   }

@@ -27,7 +27,7 @@ export class ProjectService {
     );
   }
 
-  async getProjectById(idIn: string): Promise<ProjectItem> {
+  async getProjectById(idIn: string): Promise<ProjectItem | null> {
     if (this.useMock){
       let gameProjectList = await this.getGameProjects();
       let codeProjectList = await this.getCodeProjects();
@@ -37,10 +37,10 @@ export class ProjectService {
         if (item.id == idIn)
           return item;
         }
-        return this.getEmptyProjectItem();
+        return null;
       } else {
         return await firstValueFrom(
-          this.http.get<ProjectItem>(`${this.api}/v1/projects/all/get/${idIn}`)
+          this.http.get<ProjectItem | null>(`${this.api}/v1/projects/all/get/${idIn}`)
         );
       }
   }

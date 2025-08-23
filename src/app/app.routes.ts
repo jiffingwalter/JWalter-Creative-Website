@@ -41,11 +41,11 @@ export const routes: Routes = [
         loadComponent: () => import('./components/pages/art-avatarcreator/art-avatarcreator.component').then(m => m.ArtAvatarcreatorComponent),
         data: { type: 'secondary' }
     },
-    { path: 'art/etsy', 
-        title: "Etsy Shop", 
-        loadComponent: () => import('./components/pages/art-etsy/art-etsy.component').then(m => m.ArtEtsyComponent),
-        data: { type: 'secondary' }
-    },
+    //{ path: 'art/etsy', 
+    //    title: "Etsy Shop", 
+    //    loadComponent: () => import('./components/pages/art-etsy/art-etsy.component').then(m => m.ArtEtsyComponent),
+    //    data: { type: 'secondary' }
+    //},
     { path: 'projects', 
         title: "Projects", 
         redirectTo: 'projects/games',
