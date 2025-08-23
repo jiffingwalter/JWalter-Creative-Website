@@ -20,8 +20,10 @@ export const routes: Routes = [
         data: { type: 'primary' }
     },
     { path: 'art',
-        title: "Art",
-        loadComponent: () => import('./components/pages/art/art.component').then(m => m.ArtComponent),
+        title: 'Art',
+        redirectTo: 'art/gallery',
+        pathMatch: 'full',
+        // loadComponent: () => import('./components/pages/art/art.component').then(m => m.ArtComponent),
         data: { type: 'primary' }
     },
     { path: 'art/gallery', 
@@ -39,20 +41,27 @@ export const routes: Routes = [
         loadComponent: () => import('./components/pages/art-avatarcreator/art-avatarcreator.component').then(m => m.ArtAvatarcreatorComponent),
         data: { type: 'secondary' }
     },
-    { path: 'art/etsy', 
-        title: "Etsy Shop", 
-        loadComponent: () => import('./components/pages/art-etsy/art-etsy.component').then(m => m.ArtEtsyComponent),
-        data: { type: 'secondary' }
-    },
+    //{ path: 'art/etsy', 
+    //    title: "Etsy Shop", 
+    //    loadComponent: () => import('./components/pages/art-etsy/art-etsy.component').then(m => m.ArtEtsyComponent),
+    //    data: { type: 'secondary' }
+    //},
     { path: 'projects', 
         title: "Projects", 
-        loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
+        redirectTo: 'projects/games',
+        pathMatch: 'full',
+        // loadComponent: () => import('./components/pages/underconstruction/underconstruction.component').then(m => m.UnderconstructionComponent),
         data: { type: 'primary' }
     },
     { path: 'projects/games',
         loadComponent: () => import('./components/pages/games/games.component').then(m => m.GamesComponent),
         title: "Games",
         data: { type: 'secondary' }
+    },
+    { path: 'projects/games/:id', 
+        title: "Game Project", 
+        loadComponent: () => import('./components/pages/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
+        data: { type: 'hidden' }
     },
     // { path: 'games/projects', 
         // title: "Game Projects", 
@@ -68,6 +77,11 @@ export const routes: Routes = [
         title: "Code",
         loadComponent: () => import('./components/pages/code/code.component').then(m => m.CodeComponent),
         data: { type: 'secondary' }
+    },
+    { path: 'projects/code/:id', 
+        title: "Code Project", 
+        loadComponent: () => import('./components/pages/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
+        data: { type: 'hidden' }
     },
     // { path: 'code/projects', 
         // title: "Code Projects", 

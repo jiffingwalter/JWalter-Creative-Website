@@ -1,4 +1,4 @@
-import { GalleryItemContent } from "./gallery-item-content.class";
+import { Media } from "./media.class";
 
 /** Project item class for games and code projects */
 export class ProjectItem {
@@ -15,18 +15,18 @@ export class ProjectItem {
     /** Extra information specific to the project type (genre for games, tech stack for webdev, etc) */
     meta:string;
     /** Array of media attributed to the project */
-    mediaContent:Array<GalleryItemContent>;
+    media:Array<Media>;
     /** Date the project was posted */
     dateCreated:Date;
 
-    constructor(idIn:string, titleIn:string, descriptionIn:string, pageBodyIn:string, typeIn:string, metaIn:string, mediaContentIn:Array<GalleryItemContent>, dateCreatedIn:Date){
+    constructor(idIn:string, titleIn:string, descriptionIn:string, pageBodyIn:string, typeIn:string, metaIn:string, mediaIn:Array<Media>, dateCreatedIn:Date){
         this.id = idIn;
         this.title = titleIn;
         this.description = descriptionIn;
         this.pageBody = pageBodyIn;
         this.type = typeIn;
         this.meta = metaIn;
-        this.mediaContent = mediaContentIn;
+        this.media = mediaIn;
         this.dateCreated = dateCreatedIn;
     }
 }

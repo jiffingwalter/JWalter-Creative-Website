@@ -1,133 +1,73 @@
 [
     {
-        "id": "1a4e6735-b8b8-430c-9dfc-0916ee50153f",
-        "title": "Gallery item 1",
-        "description": "sample description",
-        "content":[
+        "id": "7db04816-e830-49d2-bc87-b4def3702958",
+        "title": "Roebling Picnic Sketch",
+        "description": "<p>I was born to have picnics with the love of my life but alas I'm shy and awkward, so instead I'll draw about it and overshare on social media :)</p><br><p>Bridge and background drawn from reference</p><br><p>Song: 2016 CAVALIERS (Ohio) by Bilmuri</p>",
+        "postDate": "2025-07-20T00:00",
+        "content": [
             {
-                "id":"test-size-md",
-                "title":"image 1",
-                "type":"image"
+                "id": "b35aa386-e71f-4ae5-aa09-4f4379406cf9",
+                "title": "roebling-picnic-sketch",
+                "extention": "jpg",
+                "type": "image"
             }
         ],
-        "tags":[
-            "test1",
-            "cool thing",
-            "mock"
-        ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "tags": [
+            "art",
+            "doodle",
+            "sketch",
+            "roebling",
+            "picnic",
+            "bilmuri",
+            "girl",
+            "roebling"
+        ]
     },
     {
-        "id": "c4320b31-ab4e-40eb-9552-c0c0eb00e9c9",
-        "title": "Gallery item 2",
-        "description": "Sample description 2",
-        "content":[
+        "id": "9edf386a-ca75-4edb-805f-b715d711283d",
+        "title": "The Fun Gang",
+        "description": "<p>( * The power of mean girls and fuzzy boys shines within you )</p><br><p>26 year old man gets reinvested in cringe quirky RPG game and makes a doodle of it</p><br><p>(new Deltarune chapters dropped which means nothing to 99% of you but it means a lot to me because I'm incredibly lame)</p><br><p>Song: The Field of Hopes and Dreams by Toby Fox</p>",
+        "postDate": "2025-07-01T00:00",
+        "content": [
             {
-                "id":"test-size-lg",
-                "title":"image 1",
-                "type":"image"
+                "id": "7babaae9-b567-4c1e-93b9-c7dc131fb24a",
+                "title": "deltarune-fun-gang-1",
+                "extention": "jpg",
+                "type": "image"
             },
             {
-                "id":"test-size-md",
-                "title":"image 2",
-                "type":"image"
-            },
-            {
-                "id":"test-size-sm",
-                "title":"image 3",
-                "type":"image"
+                "id": "9ed2ce13-41c1-4a82-91a3-00333f1c59b7",
+                "title": "deltarune-fun-gang-2",
+                "extention": "jpg",
+                "type": "image"
             }
         ],
-        "tags":[
-            "item 2",
-            "nice thing"
-        ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "tags": [
+            "deltarune",
+            "doodle",
+            "sketch",
+            "toby fox"
+        ]
     },
     {
-        "id": "a69b70b7-7e21-4510-af1e-1e21e424e53f",
-        "title": "Gallery item 3",
-        "description": "Sample description 3",
-        "content":[
+        "id": "76255167-ca60-462b-917c-7c7917ba994b",
+        "title": "Uncomfortable",
+        "description": "<p>Song: Uncomfortable by Wallows</p>",
+        "postDate": "2025-02-23T00:00",
+        "content": [
             {
-                "id":"test-size-wide",
-                "title":"image 1",
-                "type":"image"
-            },
-            {
-                "id":"test-size-sm",
-                "title":"image 1",
-                "type":"image"
-            },
-            {
-                "id":"test-size-tall",
-                "title":"image 2",
-                "type":"image"
-            },
-            {
-                "id":"test-size-lg",
-                "title":"image 3",
-                "type":"image"
+                "id": "2e6c526b-e3f7-4868-a30e-63f5a9fbfd0c",
+                "title": "uncomfortable",
+                "extention": "jpg",
+                "type": "image"
             }
         ],
-        "tags":[
-        ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
-    },
-    {
-        "id": "e53d3b1a-86aa-4243-8f08-49bc3460950a",
-        "title": "Gallery item 4",
-        "description": "Sample description 4",
-        "content":[
-            {
-                "id":"test-size-lg",
-                "title":"",
-                "type":"image"
-            }
-        ],
-        "tags":[
-            "test1",
-            "cool thing",
-            "mock"
-        ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
-    },
-    {
-        "id": "11499165-5176-4e5f-b6df-5c85195b7f82",
-        "title": "Gallery item 5",
-        "description": "Sample description 5",
-        "content":[
-            {
-                "id":"test-size-tall",
-                "title":"",
-                "type":"image"
-            }
-        ],
-        "tags":[
-            "a lot of tags",
-            "cool thing",
-            "mock",
-            "tag test",
-            "cool thing",
-            "mock",
-            "tag test",
-            "cool thing",
-            "mock",
-            "tag test",
-            "cool thing",
-            "mock",
-            "tag test",
-            "cool thing",
-            "mock",
-            "tag test",
-            "cool thing",
-            "mock"
-        ],
-        "loadDate": "2025-05-28T16:00:00",
-        "dateCreated": "2025-05-28T16:00:00"
+        "tags": [
+            "art",
+            "doodle",
+            "sketch",
+            "wallows",
+            "astronaut"
+        ]
     }
 ]

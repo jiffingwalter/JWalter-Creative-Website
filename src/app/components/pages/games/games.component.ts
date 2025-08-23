@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ProjectItem } from '@classes/project-item.class';
 import { ProjectService } from '@services/project.service';
+import { ProjectListComponent } from "@components/shared/project-list/project-list.component";
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [],
+  imports: [ProjectListComponent],
   templateUrl: './games.component.html',
   styleUrl: './games.component.css'
 })

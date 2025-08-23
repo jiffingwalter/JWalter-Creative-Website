@@ -1,0 +1,16 @@
+.project-header{
+    background-position: 50%;
+    background-size: auto 225%;
+    background-repeat: no-repeat;
+    height: 12rem;
+
+    h1{
+        margin: 1rem;
+        margin-bottom: 0;
+        text-shadow: 0 0 12px black;
+    }
+    p{
+        margin: 1rem;
+        margin-top: .5rem;
+    }
+}

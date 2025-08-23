@@ -1,0 +1,24 @@
+<section class="page-root project-detail-page">
+    @if(currentItem){
+        <div class="project-header justify-end col" style="background-image: url({{imagePath}}{{currentItem.id}}-banner.jpg);">
+            <h1>{{currentItem.title}}</h1>
+            <p>{{currentItem.description}}</p>
+        </div>
+        <ul class="project-tab-selection button-list-left">
+            <li><button (click)="tab = 'overview'">Overview</button></li>
+            <li><button (click)="tab = 'gallery'">Gallery</button></li>
+        </ul>
+        <article class="project-tab-container">
+            <div class="project-tab" [class.hidden]="!isTabActive('overview')" [attr.aria-hidden]="!isTabActive('overview')">
+                <h1>Overview</h1>
+                <p [innerHTML]="currentItem.pageBody"></p>
+            </div>
+            <div class="project-tab" [class.hidden]="!isTabActive('gallery')" [attr.aria-hidden]="!isTabActive('gallery')">
+                <h1>Gallery</h1>
+                <app-media-carousel [mediaArray]="currentItem.media"></app-media-carousel>
+            </div>
+        </article>
+    }@else {
+        <h1>No project found with this ID :(</h1>
+    }
+</section>

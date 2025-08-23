@@ -1,0 +1,16 @@
+<div class="project-list">
+    @for(item of projectList; track $index){
+    <a class="project-item" role="button" tabindex="0" routerLink="{{item.id}}"
+    style="background-image: url({{imagePath}}{{item.id}}-banner.jpg);">
+        <div class="project-info row space-between">
+            <div class="info-left">
+                <h2>{{item.title}}</h2>
+                <p>{{item.meta}}</p>
+            </div>
+            <div class="info-right">
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    </a>
+    }
+</div>

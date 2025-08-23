@@ -1,4 +1,4 @@
-import { GalleryItemContent } from "./gallery-item-content.class";
+import { Media } from "./media.class";
 
 /** Gallery item class */
 export class GalleryItem {
@@ -9,21 +9,21 @@ export class GalleryItem {
     /** Description of the gallery item */
     description:string;
     /** Array of content attributed to the gallery item */
-    content:Array<GalleryItemContent>;
+    content:Array<Media>;
     /** Array of tags attributed to the gallery item */
     tags:Array<string>;
     /** Date the gallery item was created and posted */
-    dateCreated:Date;
+    postDate:Date;
     /** Date the gallery item was loaded into the database */
     loadDate:Date;
 
-    constructor(idIn:string, titleIn:string, descriptionIn:string, content:Array<GalleryItemContent>, tags:Array<string>, dateCreatedIn:Date, loadDate:Date){
+    constructor(idIn:string, titleIn:string, descriptionIn:string, content:Array<Media>, tags:Array<string>, postDateIn:Date, loadDate:Date){
         this.id = idIn;
         this.title = titleIn;
         this.description = descriptionIn;
         this.content = content;
         this.tags = tags;
-        this.dateCreated = dateCreatedIn;
+        this.postDate = postDateIn;
         this.loadDate = loadDate;
     }
 }

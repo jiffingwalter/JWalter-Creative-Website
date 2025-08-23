@@ -35,15 +35,36 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
-@media screen and (max-width: 70rem){
+app-root{
+    width: 100%;
+}
+@media screen and (min-width: 70rem){
     app-root{
-        width: 100%;
+        width: unset;
+    }
+}
+.root-stage{
+    width: 100%;
+}
+.page-root{
+    padding: 0;
+}
+@media screen and (min-width: 70rem){
+    .root-stage{
+        width: 70rem;
+    }
+    .page-root{
+        padding: 0 1rem;
     }
 }
 
-/* Utility: flex shortcuts */
-.hidden{
+
+/* Utility */
+.invisible{
     visibility: hidden;
+}
+.hidden{
+    display: none;
 }
 .flex{
     display: flex;
@@ -69,14 +90,20 @@ body{
     align-items: center;
     justify-content: center;
 }
-.align-l{
+.align-start{
     display: flex;
     align-items: flex-start;
+}
+.justify-start{
+    display: flex;
     justify-content: flex-start;
 }
-.align-r{
+.align-end{
     display: flex;
     align-items: flex-end;
+}
+.justify-end{
+    display: flex;
     justify-content: flex-end;
 }
 .wrap{
@@ -91,11 +118,17 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 /* Shared rules */
-.page-root{
-    padding: 0 1rem;
-}
 button{
     padding: .75rem;
     cursor: pointer;
@@ -120,8 +153,15 @@ button[disabled]{
     color: var(--color-primary);
     cursor: default;
 }
-.buttons-list-left button:first-child{
-    clip-path: var(--clip-rhombus-noleft);
+.button-list-left {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li:first-child > button{
+        clip-path: var(--clip-rhombus-noleft);
+    }
 }
 
 /* Headers and text */
@@ -130,13 +170,12 @@ h1,h2,h3,h4,h5,h6,sub,sup{
 }
 .banner-primary{
     background: var(--color-secondary);
-    margin: 0.5rem -1rem;
+    margin: 0;
     padding: 1rem 1rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1120px) {
     .banner-primary{
-        margin: .5rem -3rem;
-        margin-bottom: 0;
+        margin: 0 -3rem;
         padding: 1rem 3rem;
         clip-path: var(--clip-rhombus);
     }
@@ -159,9 +198,7 @@ select{
 /* Containers */
 .subcontainer{
     background: var(--color-primary);
-    margin: 0 -1rem;
     padding: 0 1rem;
-    width: 100%;
     min-width: 15rem;
 }
 

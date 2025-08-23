@@ -3,7 +3,7 @@ import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { GalleryService } from '@services/gallery.service';
 import { GalleryItem } from '@classes/gallery-item.class';
-import { MediaCarouselComponent } from "@components/shared/image-carousel/media-carousel.component";
+import { MediaCarouselComponent } from "@components/shared/media-carousel/media-carousel.component";
 
 @Component({
   selector: 'app-art-gallery-detail',
