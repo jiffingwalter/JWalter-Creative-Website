@@ -1,11 +1,21 @@
 <section class="page-root project-detail-page">
     @if(currentItem){
-        <div class="project-header align-end" style="background-image: url({{imagePath}}{{currentItem.id}}-banner.jpg);">
+        <div class="project-header justify-end col" style="background-image: url({{imagePath}}{{currentItem.id}}-banner.jpg);">
             <h1>{{currentItem.title}}</h1>
+            <p>{{currentItem.description}}</p>
         </div>
-        <p>{{currentItem.description}}</p>
-        <app-media-carousel [mediaArray]="currentItem.media"></app-media-carousel>
-        <p [innerHTML]="currentItem.pageBody"></p>
+        <ul class="project-tab-selection">
+            <li>Overview</li>
+            <li>Gallery</li>
+        </ul>
+        <article class="project-tab-container">
+            <div class="project-tab" aria-hidden="false">
+                <p [innerHTML]="currentItem.pageBody"></p>
+            </div>
+            <div class="project-tab" aria-hidden="true">
+                <app-media-carousel [mediaArray]="currentItem.media"></app-media-carousel>
+            </div>
+        </article>
     }@else {
         <h1>No project found with this ID :(</h1>
     }

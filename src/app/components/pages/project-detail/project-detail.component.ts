@@ -20,6 +20,7 @@ export class ProjectDetailComponent {
   ){}
   currentItem:ProjectItem | null = null;
   imagePath:String = this.galleryService.getImagePath();
+  tab:String = "info";
 
   async ngOnInit(){
     const id = this.activeRoute.snapshot.paramMap.get('id');

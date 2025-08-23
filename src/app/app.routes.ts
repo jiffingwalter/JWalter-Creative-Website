@@ -59,7 +59,7 @@ export const routes: Routes = [
         data: { type: 'secondary' }
     },
     { path: 'projects/games/:id', 
-        title: "Gallery Item", 
+        title: "Game Project", 
         loadComponent: () => import('./components/pages/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
         data: { type: 'hidden' }
     },
@@ -79,7 +79,7 @@ export const routes: Routes = [
         data: { type: 'secondary' }
     },
     { path: 'projects/code/:id', 
-        title: "Gallery Item", 
+        title: "Code Project", 
         loadComponent: () => import('./components/pages/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
         data: { type: 'hidden' }
     },
