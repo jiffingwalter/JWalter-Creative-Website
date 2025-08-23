@@ -20,10 +20,14 @@ export class ProjectDetailComponent {
   ){}
   currentItem:ProjectItem | null = null;
   imagePath:String = this.galleryService.getImagePath();
-  tab:String = "info";
+  tab:String = "overview";
 
   async ngOnInit(){
     const id = this.activeRoute.snapshot.paramMap.get('id');
     if (id) this.currentItem = await this.projectService.getProjectById(id);
+  }
+
+  isTabActive(tabIn:String): boolean{
+    return (this.tab == tabIn);
   }
 }

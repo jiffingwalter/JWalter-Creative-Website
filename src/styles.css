@@ -59,9 +59,12 @@ app-root{
 }
 
 
-/* Utility: flex shortcuts */
-.hidden{
+/* Utility */
+.invisible{
     visibility: hidden;
+}
+.hidden{
+    display: none;
 }
 .flex{
     display: flex;
@@ -150,8 +153,15 @@ button[disabled]{
     color: var(--color-primary);
     cursor: default;
 }
-.buttons-list-left button:first-child{
-    clip-path: var(--clip-rhombus-noleft);
+.button-list-left {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li:first-child > button{
+        clip-path: var(--clip-rhombus-noleft);
+    }
 }
 
 /* Headers and text */
