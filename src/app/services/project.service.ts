@@ -29,7 +29,10 @@ export class ProjectService {
 
   async getProjectById(idIn: string): Promise<ProjectItem> {
     if (this.useMock){
-      var projectList = await this.getGameProjects();
+      let gameProjectList = await this.getGameProjects();
+      let codeProjectList = await this.getCodeProjects();
+
+      let projectList = gameProjectList.concat(codeProjectList);
         for (var item of projectList){
         if (item.id == idIn)
           return item;

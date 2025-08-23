@@ -3,7 +3,7 @@
         "id":"test",
         "title":"code project title",
         "description":"code project description",
-        "pageBody":"<h1>code text body</h1>",
+        "pageBody":"<p>code text body</p>",
         "type":"code",
         "meta":"javascript",
         "media":[
